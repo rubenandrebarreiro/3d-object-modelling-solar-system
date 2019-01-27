@@ -1,6 +1,6 @@
 # 3D Object Viewer - Solar System
 
-A project based **_Computer Graphics and Interfaces_**, using **_3D Modelling_**. This project was built using [**_HTML_**](https://www.w3schools.com/html/), [**_CSS_**](https://www.w3schools.com/css/), [**_JavaScript_**](https://www.w3schools.com/js/), [**_JSON_**](https://www.json.org/), [**_WebGL_**](https://get.webgl.org/) and [**_Three.js_**](https://threejs.org/). The application gives a vision of our _Solar System_ and _all its elements_, all using _3D Modelling_ and _3D Objects_. Each element presented (**_Sun_**, **_Planets_** and **_Earth's Moon_**) have its _respectively information_ when the _mouse hover above of each one_!
+A project based in **_Computer Graphics and Interfaces_**, using **_3D Modelling_**. This project was built using [**_HTML_**](https://www.w3schools.com/html/), [**_CSS_**](https://www.w3schools.com/css/), [**_JavaScript_**](https://www.w3schools.com/js/), [**_JSON_**](https://www.json.org/), [**_WebGL_**](https://get.webgl.org/) and [**_Three.js_**](https://threejs.org/). The application gives a vision of our _Solar System_ and _all its elements_, all using _3D Modelling_ and _3D Objects_. Each element presented (**_Sun_**, **_Planets_** and **_Earth's Moon_**) have its _respectively information_ when the _mouse hover above of each one_!
 
 > You can view an _online demo_, [clicking here](https://rubenandrebarreiro.github.io/projects/threejs/3d-object-viewer-solar-system/3d-object-viewer-solar-system.html)!
 
