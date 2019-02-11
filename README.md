@@ -1,6 +1,6 @@
 # 3D Object Viewer - Solar System
 
-A project based in **_Computer Graphics and Interfaces_**, using **_3D Modelling_**. This project was built using [**_HTML_**](https://www.w3schools.com/html/), [**_CSS_**](https://www.w3schools.com/css/), [**_JavaScript_**](https://www.w3schools.com/js/), [**_JSON (JavaScript Object Notation)_**](https://www.json.org/), [**_WebGL_**](https://get.webgl.org/) and [**_Three.js_**](https://threejs.org/). The application gives a vision of our _Solar System_ and _all its elements_, all using _3D Modelling_ and _3D Objects_. Each element presented (**_Sun_**, **_Planets_**, **_Dwarf Planets_** and **_Earth's Moon_**) have its _respectively information_ when the _mouse hover above of each one_!
+A project based in **_Computer Graphics and Interfaces_**, using **_3D Modelling_**. This project was built using [**_HTML (HyperText Markup Language)_**](https://www.w3schools.com/html/), [**_CSS (Cascade Style Sheets)_**](https://www.w3schools.com/css/), [**_JavaScript_**](https://www.w3schools.com/js/), [**_JSON (JavaScript Object Notation)_**](https://www.json.org/), [**_WebGL (Web Graphics Library)_**](https://get.webgl.org/) and [**_Three.js_**](https://threejs.org/). The application gives a vision of our _Solar System_ and _all its elements_, all using _3D Modelling_ and _3D Objects_. Each element presented (**_Sun_**, **_Planets_**, **_Dwarf Planets_** and **_Earth's Moon_**) have its _respectively information_ when the _mouse hover above of each one_!
 
 > You can view an _online demo_, [clicking here](https://rubenandrebarreiro.github.io/projects/threejs/3d-object-viewer-solar-system/3d-object-viewer-solar-system.html)!
 
@@ -70,11 +70,11 @@ Instructions (also available in the _canvas_ of the application):
 1) It's **_mandatory_** to have the folders called **_common_**, **_info_** and **_imgs_** in the local repository, because it's where are the necessary **_WebGL utilities_**, **_Three.js utilities_**, **_geometric/solid figures_**, **_textures_**, **_JSON(JavaScript Object Notation)'s files with important information/data_** and **_other libraries_**
 
 ## Built with
-* [**_HTML_**](https://www.w3schools.com/html/)
-* [**_CSS_**](https://www.w3schools.com/css/)
+* [**_HTML (HyperText Markup Language)_**](https://www.w3schools.com/html/)
+* [**_CSS (Cascade Style Sheets)_**](https://www.w3schools.com/css/)
 * [**_JavaScript_**](https://www.w3schools.com/js/)
 * [**_JSON (JavaScript Object Notation)_**](https://www.json.org/)
-* [**_WebGL_**](https://get.webgl.org/)
+* [**_WebGL (Web Graphics Library)_**](https://get.webgl.org/)
 * [**_Three.js_**](https://threejs.org/)
 * [**_Atom_**](https://atom.io/)
 * [**_Brackets_**](http://brackets.io/)
@@ -83,17 +83,21 @@ Instructions (also available in the _canvas_ of the application):
 > [Rúben André Barreiro](https://github.com/rubenandrebarreiro/)
 
 ## Contacts
+
 ### Rúben André Barreiro
-#### GitHub's Portfolio/Personal Blog
-* [https://rubenandrebarreiro.github.io/](https://rubenandrebarreiro.github.io/)
-
-#### Repositories' Services
-* [https://github.com/rubenandrebarreiro/](https://github.com/rubenandrebarreiro/)
-* [https://gitlab.com/rubenandrebarreiro/](https://gitlab.com/rubenandrebarreiro/)
-* [https://bitbucket.org/rubenandrebarreiro/](https://bitbucket.org/rubenandrebarreiro/)
-
 #### E-mails
 * [ruben.barreiro.92@gmail.com](mailto:ruben.barreiro.92@gmail.com)
 * [r.barreiro@campus.fct.unl.pt](mailto:r.barreiro@campus.fct.unl.pt)
 * [up201808917@fe.up.pt](mailto:up201808917@fe.up.pt)
 * [up201808917@g.uporto.pt](mailto:up201808917@g.uporto.pt)
+
+## Portfolios/Blogs and Git Hosting/Repository Services
+
+### Rúben André Barreiro
+#### GitHub's Portfolio/Personal Blog
+* [https://rubenandrebarreiro.github.io/](https://rubenandrebarreiro.github.io/)
+
+#### Hosting/Repository Services
+* [https://github.com/rubenandrebarreiro/](https://github.com/rubenandrebarreiro/)
+* [https://gitlab.com/rubenandrebarreiro/](https://gitlab.com/rubenandrebarreiro/)
+* [https://bitbucket.org/rubenandrebarreiro/](https://bitbucket.org/rubenandrebarreiro/)
