@@ -97,12 +97,6 @@ You can run the application, by open the following file presented in the _root_ 
 
 Instructions (also available in the _canvas_ of the application):
 
-1) Use **_'Q'_** and **_'A'_** keys dive/emerge. Use **_click/drag/release_** in the **_canvas_** to move center point
-
-2) Choose the current **_Fractal's Set_** in use (**_Benoit Mandelbrot_** or **_Gaston Julia_**)
-
-3) Choose also the current **_Factor_** to the **_Scale_** of the current **_Fractal_** in use
-
 #### Notes (IMPORTANT)
 1) It's **_mandatory_** to have the folders called **_common_**, **_info_** and **_imgs_** in the local repository, because it's where are the necessary **_WebGL utilities_**, **_Three.js utilities_**, **_geometric/solid figures_**, **_textures_**, **_JSON(JavaScript Object Notation)'s files with important information/data_** and **_other libraries_**
 
