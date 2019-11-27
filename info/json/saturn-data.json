@@ -1,0 +1,57 @@
+{
+    "Name": "Saturn",
+    "Designations": [{
+        "Astrology Symbol": "♄",
+        "Adjectives": "Saturnian, Cronian"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "10.123,800 au | 1,514,500,000 km",
+        "Perihelion": "9.041,200 au | 1,352,550,000 km",
+        "Semi-major Axis": "9.582,600 au | 1,433,530,000 km",
+        "Eccentricity": "0.056,500",
+        "Orbital Period": "10,759.220 days | 29.457,100 years | 24,491.070 Saturnian Solar Days",
+        "Synodic Period": "378.09 days",
+        "Average Orbital Speed": "9.68 km/s | 6.01 mi/s",
+        "Mean Anomaly": "317.020°",
+        "Inclination": "2.485° to Ecliptic | 5.51° to Sun's Equator | 0.93° to Invariable Plane",
+        "Longitude of Ascending Node": "113.665°",
+        "Argument of Perihelion": "339.392°",
+        "Known Satellites": "79 with formal designations; Innumerable additional moonlets"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "58,232 km | 36,184 mi",
+        "Equatorial Radius": "60,268 km | 37,449 mi | 9.449 Earths",
+        "Polar Radius": "54,364 km | 33,780 mi | 8.552 Earths",
+        "Flattening": "0.097,960",
+        "Surface Area": "4.27×10<sup>10</sup> km<sup>2</sup> | 1.65×10<sup>10</sup> sq mi | 83.703 Earths",
+        "Volume": "8.271,300×10<sup>14</sup> km<sup>3</sup> | 1.984,400x10<sup>14</sup> cu mi | 763.59 Earths",
+        "Mass": "5.683,400×10<sup>26</sup> kg | 95.159 Earths",
+        "Mean Density": "0.687 g/cm<sup>3</sup> (0.024,800 lb/cu in - less than water)",
+        "Surface Gravity": "10.44 m/s<sup>2</sup> (1.065 g | 34.300 ft/s<sup>2</sup>)",
+        "Moment of Inertia Factor": "0.210 I/MR<sup>2</sup> (Estimate)",
+        "Escape Velocity": "35.500 km/s (22.100 mi/s)",
+        "Sidereal Rotation Period": "10 hours, 55 mins and 30 secs (+ 1 mins and 52 secs | − 1 mins and 19 secs)",
+        "Equatorial Rotation Velocity": "9.870 km/s (35,500 km/h | 6.130 mi/s)",
+        "Axial Tilt": "26.73° (to orbit)",
+        "North Pole Right Ascension": "40.589° | 2 hours, 42 mins and 21 secs",
+        "North Pole Declination": "83.537°",
+        "Albedo": "0.342 (Bond) | 0.499 (geom.)",
+        "Surface Temp. (1 Bar Level)": "134 K (mean) | -139 °C (mean)",
+        "Surface Temp. (0.1 Bar)": "84 K (mean) | -189 °C (max)",
+        "Apparent Magnitude": "-0.55 to +1.17",
+        "Angular Diameter": "14.5″ to 20.1″ (excludes rings)"
+    }],
+    "Atmosphere": [{
+        "Surface Pressure": "140 kPa",
+        "Scale Heigh": "59.500 km (37.0 mi)"
+    }],
+    "Composition by Volume": [{
+        "Hydrogen": "96.3% ± 2.4% (H<sub>2</sub>)",
+        "Helium": "3.25% ± 2.4% (He)",
+        "Methane": "0.45% ± 0.2% (CH<sub>4</sub>)",
+        "Ammonia": "0.0125% ± 0.0075% (NH<sub>3</sub>)",
+        "Hydrogen Deuteride": "0.0110% ± 0.0058% (HD)",
+        "Ethane": "0.0007% ± 0.00015% (C<sub>2</sub>H<sub>6</sub>)",
+        "Ices": "Ammonia (NH<sub>3</sub>) | Water (H<sub>2</sub>O) | Ammonium Hydrosulfide (NH<sub>4</sub>SH)"
+    }]
+}

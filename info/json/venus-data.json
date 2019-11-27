@@ -1,0 +1,55 @@
+{
+    "Name": "Venus",
+    "Designations": [{
+        "Astrology Symbol": "♀︎",
+        "Adjectives": "Venusian, Cytherean, Venerean"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "0.728,213 au | 108,939,000 km",
+        "Perihelion": "0.718,440 au | 107,477,000 km",
+        "Semi-major Axis": "0.723,332 au | 108,208,000 km",
+        "Eccentricity": "0.006,772",
+        "Orbital Period": "224.701 days | 0.615,198 years | 1.92 Venus Solar Days",
+        "Synodic Period": "583.92 days",
+        "Average Orbital Speed": "35.02 km/s",
+        "Mean Anomaly": "50.115°",
+        "Inclination": "3.394,58° to Ecliptic | 3.86° to Sun's Equator |<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.19° to Invariable Plane",
+        "Longitude of Ascending Node": "76.680°",
+        "Argument of Perihelion": "54.884°",
+        "Satellites": "None"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "6,051.8±1.0 km | 0.949,9 Earths",
+        "Flattening": "0",
+        "Surface Area": "4.602,3×10<sup>8</sup> km<sup>2</sup> | 0.902 Earths",
+        "Volume": "9.284,3×10<sup>11</sup> km<sup>3</sup> | 0.866 Earths",
+        "Mass": "4.867,5×10<sup>24</sup> kg | 0.815 Earths",
+        "Mean Density": "5.243 g/cm<sup>3</sup>",
+        "Surface Gravity": "8.87 m/s<sup>2</sup> | 0.904 g",
+        "Escape Velocity": "10.36 km/s (6.44 mi/s)",
+        "Sidereal Rotation Period": "-243.025 days (retrogade)",
+        "Equatorial Rotation Velocity": "6.52 km/h (1.81 m/s)",
+        "Axial Tilt": "2.64° (for retrogade rotation) | 177.36° (to orbit)",
+        "North Pole Right Ascension": "18 hours, 11 mins and 2 secs | 272.76°",
+        "North Pole Declination": "67.16°",
+        "Albedo": "0.76 (Bond) | 0.689 (geom.)",
+        "Surface Temp. (Kelvin)": "737 K (mean)",
+        "Surface Temp. (Celsius)": "462 °C (mean)",
+        "Apparent Magnitude": "-4.92 to -2.98",
+        "Angular Diameter": "9.7″–66.0″"
+    }],
+    "Atmosphere": [{
+        "Surface Pressure": "92 bar (9.2 MPa)"
+    }],
+    "Composition by Volume": [{
+        "Carbon Dioxide": "96.5%",
+        "Nitrogen": "3.5%",
+        "Sulfure Dioxide": "0.015%",
+        "Argon": "0.007%",
+        "Water Vapour": "0.002%",
+        "Carbon Monoxide": "0.0017%",
+        "Helium": "0.0012%",
+        "Neon": "0.0007%",
+        "Others": "Trace amounts of carbonyl sulfide, hydrogen chloride, <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hydrogen fluoride"
+    }] 
+}

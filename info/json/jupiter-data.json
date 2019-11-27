@@ -1,0 +1,58 @@
+{
+    "Name": "Jupiter",
+    "Designations": [{
+        "Astrology Symbol": "♃",
+        "Adjectives": "Jovian"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "5.458,800 au | 816,620,000 km",
+        "Perihelion": "4.950,100 au | 740,520,000 km",
+        "Semi-major Axis": "5.204,400 au | 778,570,000 km",
+        "Eccentricity": "0.048,900",
+        "Orbital Period": "4,332.590 d days | 11.862 years | 10,475.800 Jovian Solar Days",
+        "Synodic Period": "398.88 days",
+        "Average Orbital Speed": "13.07 km/s | 8.12 mi/s",
+        "Mean Anomaly": "20.020°",
+        "Inclination": "1.303° to Ecliptic | 6.09° to Sun's Equator | 0.32° to Invariable Plane",
+        "Longitude of Ascending Node": "100.464°",
+        "Argument of Perihelion": "273.867°",
+        "Known Satellites": "79 (as of 2018)"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "69,911 km | 43,441 mi",
+        "Equatorial Radius": "71,492 km | 44,423 mi",
+        "Polar Radius": "66,854 km | 41,541 mi | 10.517 Earths",
+        "Flattening": "0.065,870",
+        "Surface Area": "6.141,900×10<sup>10</sup> km<sup>2</sup> | 2.371,400×10<sup>10</sup> sq mi | 121.900 Earths",
+        "Volume": "1.431,300×10<sup>15</sup> km<sup>3</sup> | 3.434x10<sup>14</sup> cu mi | 1,321 Earths",
+        "Mass": "1.898,200×10<sup>27</sup> kg | 4.184,800x10<sup>27</sup> lb | 317.800 Earths | 1/1047 Sun",
+        "Mean Density": "1.326 kg/m<sup>3</sup> (2.235 lb/cu yd)",
+        "Surface Gravity": "24.790 m/s<sup>2</sup> (2.528 g | 81.300 ft/s<sup>2</sup>)",
+        "Moment of Inertia Factor": "0.254 I/MR<sup>2</sup> (Estimate)",
+        "Escape Velocity": "59.500 km/s (37.0 mi/s)",
+        "Sidereal Rotation Period": "9.925 hours (9 hours, 55 mins and 30 secs)",
+        "Equatorial Rotation Velocity": "12.600 km/s (45,000 km/h | 7.800 mi/s)",
+        "Axial Tilt": "3.13° (to orbit)",
+        "North Pole Right Ascension": "268.057° | 17 hours, 52 mins and 14 secs",
+        "North Pole Declination": "64.495°",
+        "Albedo": "0.503 (Bond) | 0.538 (geom.)",
+        "Surface Temp. (1 Bar Level)": "165 K (mean) | -108 °C (mean)",
+        "Surface Temp. (0.1 Bar)": "112 K (mean) | -161 °C (max)",
+        "Apparent Magnitude": "-2.94 to -1.66",
+        "Angular Diameter": "29.8″ to 50.1″"
+    }],
+    "Atmosphere": [{
+        "Surface Pressure": "20-200 kPa | 70 kPa",
+        "Scale Heigh": "27 km (17 mi)"
+    }],
+    "Composition by Volume": [{
+        "Hydrogen": "89% ± 2.0% (H<sub>2</sub>)",
+        "Helium": "10% ± 2.0% (He)",
+        "Methane": "0.3% ± 0.1% (CH<sub>4</sub>)",
+        "Ammonia": "0.026% ± 0.004% (NH<sub>3</sub>)",
+        "Hydrogen Deuteride": "0.0028% ± 0.001% (HD)",
+        "Ethane": "0.0006% ± 0.0002% (C<sub>2</sub>H<sub>6</sub>)",
+        "Water": "0.0004% ± 0.0004% (H<sub>2</sub>0)",
+        "Ices": "Ammonia (NH<sub>3</sub>) | Water (H<sub>2</sub>O) | Ammonium Hydrosulfide (NH<sub>4</sub>SH)"
+    }]
+}

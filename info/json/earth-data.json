@@ -1,0 +1,54 @@
+{
+    "Name": "Earth",
+    "Designations": [{
+        "Astrology Symbol": "⊕",
+        "Adjectives": "Terrestrial Planet, Blue Planet"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "1.017 au | 152,100,000 km | 94,500,000 mi",
+        "Perihelion": "0.983,270 au | 147,095,000 km | 91,401,000 mi",
+        "Semi-major Axis": "1.000,001,020 au | 149,598,023 km | 92,955,902 mi",
+        "Eccentricity": "0.016,708,600",
+        "Orbital Period": "365.256,363,004 days | 1.000,017,420,960 years",
+        "Average Orbital Speed": "29.78 km/s | 107,200 km/h | 66,000 mph",
+        "Mean Anomaly": "358.617°",
+        "Inclination": "0.000,05° to Ecliptic | 7.155° to Sun's Equator |<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.578,690° to Invariable Plane",
+        "Longitude of Ascending Node": "-11.260,640° to Ecliptic",
+        "Argument of Perihelion": "114.207,830°",
+        "Satellites": "Moon"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "6,371 km | 3,958.8 mi",
+        "Equatorial Radius": "6,378.1 km | 3,963.2 mi",
+        "Polar Radius": "6,356.8 km | 3,949.1 mi",
+        "Flattening": "0.003,352,800 | 1/298.257,222,101 (ETRS89)",
+        "Circumference (Equatorial)": "40,075.017 km | 24,901.461 mi",
+        "Circumference (Meridional)": "40,007.860 km | 24,859.730 mi",
+        "Surface Area (Total)": "510.072.000 km<sup>2</sup> | 196,940,000 sq mi",
+        "Surface Area (Land)": "148.940.000 km<sup>2</sup> | 57,510,000 sq mi | 29.2% of Total",
+        "Surface Area (Water)": "361.132.000 km<sup>2</sup> | 139,434,000 sq mi | 70.8% of Total",
+        "Volume": "1.083,210×10<sup>12</sup> km<sup>3</sup> | 2.598,760x10<sup>11</sup> cu mi",
+        "Mass": "5.972,37×10<sup>24</sup> kg | 1.316,680x10<sup>25</sup> lb | 3x10<sup>-6</sup> M<sub>☉</sub>",
+        "Mean Density": "5.514 g/cm<sup>3</sup> (0.199,200 lb/cu in)",
+        "Surface Gravity": "9.807 m/s<sup>2</sup> (1 g | 32.180 ft/s<sup>2</sup>)",
+        "Moment of Inertia Factor": "0.330,700",
+        "Escape Velocity": "11.186 km/s (40,270 km/h | 25,020 mph)",
+        "Sidereal Rotation Period": "0.997,268,680 days (23 hours, 56 mins and 4.100 secs)",
+        "Equatorial Rotation Velocity": "0.465,100 km/s (1.674,400 km/h | 1,040.400 mph)",
+        "Axial Tilt": "23.439,281,100°",
+        "Albedo": "0.306 (Bond) | 0.367 (geom.)",
+        "Surface Temp. (Kelvin)": "184 K (min) | 288 K (mean) | 330 K (max)",
+        "Surface Temp. (Celsius)": "-89.2 °C (min) | 14.9 °C (mean) | 56.9 °C (max)",
+        "Surface Temp. (Fahrenheit)": "-128.5 °F (min) | 58.7 °F (mean) | 134.3 °F (max)"
+    }],
+    "Atmosphere": [{
+        "Surface Pressure": "101.325 kPa (at MSL)"
+    }],
+    "Composition by Volume": [{
+        "Nitrogen": "78.08% (N<sub>2</sub> | Dry Air)",
+        "Oxygen": "20.95% (O<sub>2</sub>)",
+        "Argon": "0.934%",
+        "Carbon Dioxide": "0.0408%",
+        "Water Vapor": "~ 1% (Climate Variable)"
+    }]
+}

@@ -1,0 +1,55 @@
+{
+    "Name": "Neptune",
+    "Designations": [{
+        "Astrology Symbol": "♆",
+        "Adjectives": "Neptunian"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "30.330 au | 4,540,000 km",
+        "Perihelion": "29.810 au | 4,460,000 km",
+        "Semi-major Axis": "30.110 au | 4,500,000 km",
+        "Eccentricity": "0.009,456",
+        "Orbital Period": "60,182 days | 164.800 years | 89,666 Neptunian Solar Days",
+        "Synodic Period": "367.49 days",
+        "Average Orbital Speed": "5.43 km/s",
+        "Mean Anomaly": "256.228°",
+        "Inclination": "1.767,975° to Ecliptic | 6.43° to Sun's Equator | 0.72° to Invariable Plane",
+        "Longitude of Ascending Node": "131.784°",
+        "Argument of Perihelion": "276.336°",
+        "Known Satellites": "14"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "24,622 ± 19 km",
+        "Equatorial Radius": "24,764 ± 15 km | 3.883 Earths",
+        "Polar Radius": "24,341 ± 30 km | 3.829 Earths",
+        "Flattening": "0.017,100 ± 0.0013",
+        "Surface Area": "7.618,300×10<sup>9</sup> km<sup>2</sup> | 14.980 Earths",
+        "Volume": "6.254×10<sup>13</sup> km<sup>3</sup> | 57.74 Earths",
+        "Mass": "1.024,130×10<sup>26</sup> kg | 17.147 Earths | 5.150×10<sup>-5</sup> Suns",
+        "Mean Density": "1.638 g/cm<sup>3</sup>",
+        "Surface Gravity": "11.150 m/s<sup>2</sup> | 1.140 g",
+        "Moment of Inertia Factor": "0.23 (Estimate)",
+        "Escape Velocity": "23.500 km/s",
+        "Sidereal Rotation Period": "16 hours, 6 mins and 36 secs | 0.671,300 days",
+        "Equatorial Rotation Velocity": "2.680 km/s (9,650 km/h)",
+        "Axial Tilt": "28.32° (to orbit)",
+        "North Pole Right Ascension": "299.300° | 19 hours, 57 mins and 20 secs",
+        "North Pole Declination": "42.950°",
+        "Albedo": "0.290 (Bond) | 0.442 (geom.)",
+        "Surface Temp. (1 Bar Level)": "72 K (mean) | -201 °C (mean)",
+        "Surface Temp. (0.1 Bar - Tropopause)": "55 K (mean) | -218° C (mean)",
+        "Apparent Magnitude": "7.67 to 8.00",
+        "Angular Diameter": "2.2″ to 2.4″"
+    }],
+    "Atmosphere": [{
+        "Scale Heigh": "19.7 ± 0.6 km"
+    }],
+    "Composition by Volume": [{
+        "Hydrogen": "80% ± 3.2% (H<sub>2</sub>)",
+        "Helium": "19% ± 3.2% (He)",
+        "Methane": "1.5% ± 0.5% (CH<sub>4</sub>)",
+        "Hydrogen Deuteride": "~0.019% (HD)",
+        "Ethane": "~0.000,150% (C<sub>2</sub>H<sub>6</sub>)",
+        "Ices": "Ammonia (NH<sub>3</sub>) | Water (H<sub>2</sub>O) | Ammonium Hydrosulfide (NH<sub>4</sub>SH) | Methane Ice (CH<sub>4</sub> · 5.75×H<sub>2</sub>O)"
+    }]
+}

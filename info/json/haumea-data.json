@@ -1,0 +1,37 @@
+{
+    "Name": "Pluto",
+    "Designations": [{
+        "Alternative Designations": "2003 EL<sub>61</sub>",
+        "Minor Planet Category": "Dwarf Planet, Plutoid, Trans-Neptunian Object, 7:12 Resonance, Delisted Cubewano (Haumea Family), Trinary",
+        "Adjectives": "Haumean"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "51.483 au | 7.702 tm",
+        "Perihelion": "34.952 au | 5,229 tm",
+        "Semi-major Axis": "43.218 au | 6.465 tm",
+        "Eccentricity": "0.191,260",
+        "Orbital Period": "103,774 days | 284.120 years",
+        "Average Orbital Speed": "4.531 km/s",
+        "Mean Anomaly": "209.07°",
+        "Inclination": "28.19°",
+        "Longitude of Ascending Node": "121.790°",
+        "Argument of Perihelion": "240.200°",
+        "Known Satellites": "2"
+    }],
+    "Physical Characteristics": [{
+        "Dimensions": "2,322×1,704×1,138 km | 1,920×1,540×990 km",
+        "Mean Radius": "816 km | 620<sup>+34 | -29</sup> km (Herschel) | 690 km",
+        "Surface Area": "~9.2×10<sup>6</sup> km<sup>2</sup>",
+        "Volume": "~2.4×10<sup>9</sup> km<sup>3</sup>",
+        "Mass": "(4.006 ± 0.040)×10<sup>21</sup> kg | 0.000,660 Earths",
+        "Mean Density": "2.6 g/cm<sup>3</sup> | 1.885 - 1.757 g/cm<sup>3</sup>",
+        "Equatorial Surface Gravity": "~0.401 m/s<sup>2</sup>",
+        "Equatorial Escape Velocity": "~0.809 km/s",
+        "Sidereal Rotation Period": "3.915,500 ± 0.000,100 hours | 0.163,146 ± 0.000,004 days",
+        "Geometric Albedo": "0.804<sup>+0.062 | −0.095</sup> | 0.700–0.750 | 0.510 ± 0.020",
+        "Temperature": "< 50 K",
+        "Spectral Type": "Neutral | B−V = 0.640, V−R = 0.330 | B0−V0 = 0.646",
+        "Apparent Magnitude": "17.3 (opposition)",
+        "Absolute Magnitude (H)": "0.2",
+    }]
+}

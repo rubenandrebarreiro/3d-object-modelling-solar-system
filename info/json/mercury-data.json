@@ -1,0 +1,53 @@
+{
+    "Name": "Mercury",
+    "Designations": [{
+        "Astrology Symbol": "☿",
+        "Adjectives": "Mercurian, Mercurial"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "0.466,697 au | 69,816,900 km",
+        "Perihelion": "0.307,499 au | 46,001,200 km",
+        "Semi-major Axis": "0.387,098 au | 57,909,050 km",
+        "Eccentricity": "0.205,630",
+        "Orbital Period": "87.969,1 days | 0.240,846 years |     0.5 Mercury Solar Days",
+        "Synodic Period": "115.88 days",
+        "Average Orbital Speed": "47.362 km/s",
+        "Mean Anomaly": "174.796°",
+        "Inclination": "7.005° to Ecliptic | 3.38° to Sun's Equator | 6.34° to Invariable Plane",
+        "Longitude of Ascending Node": "48.331°",
+        "Argument of Perihelion": "29.124°",
+        "Satellites": "None"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "2,439.7±1.0 km | 0.382,9 Earths",
+        "Flattening": "0",
+        "Surface Area": "7.48×10<sup>7</sup> km<sup>2</sup> | 0.147 Earths",
+        "Volume": "6.083×10<sup>10</sup> km<sup>3</sup> | 0.056 Earths",
+        "Mass": "3.3011×10<sup>23</sup> kg | 0.055 Earths",
+        "Mean Density": "5.427 g/cm<sup>3</sup>",
+        "Surface Gravity": "3.7 m/s<sup>2</sup> | 0.38 g",
+        "Moment of Inertia Factor": "0.346±0.014",
+        "Escape Velocity": "4.25 km/s",
+        "Sidereal Rotation Period": "58.646 days | 1,407.5 hours",
+        "Equatorial Rotation Velocity": "10.892 km/h (3.026 m/s)",
+        "Axial Tilt": "2.04′ ± 0.08′ (to orbit) | (0.034°)",
+        "North Pole Right Ascension": "18 hours, 44 mins and 2 secs | 281.01°",
+        "North Pole Declination": "61.45°",
+        "Albedo": "0.088 (Bond) | 0.142 (geom.)",
+        "Surface Temp. (0°N, 0°W)": "100 K (min) | 340 K (mean) | 700 K (max)",
+        "Surface Temp. (85°N, 0°W)": "80 K (min) | 200 K (mean) | 380 K (max)",
+        "Apparent Magnitude": "-2.48 to +7.25",
+        "Angular Diameter": "4.5–13″"
+    }],
+    "Atmosphere": [{
+        "Surface Pressure": "trace (≲ 0.5 nPa)"
+    }],
+    "Composition by Volume": [{
+        "Molecular Oxygen": "42%",
+        "Sodium": "29%",
+        "Hydrogen": "22%",
+        "Helium": "6%",
+        "Potassium": "0.5%",
+        "Others": "Trace amounts of argon, nitrogen, carbon dioxide, water vapor,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xenon, krypton and neon"
+    }] 
+}

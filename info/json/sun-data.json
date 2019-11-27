@@ -1,0 +1,56 @@
+{
+    "Name": "Sun",
+    "Designations": [{
+        "Astrology Symbol": "☉"
+    }],
+    "Observation Data": [{
+        "Mean Distance from Earth": "1 au ≈ 1.496×10<sup>8</sup> kms (8 mins and 19 secs at light speed)",
+        "Visual Brightness (V)": "−26.74",
+        "Absolute Magnitude": "4.83",
+        "Metallicity Z": "0.0122",
+        "Angular Size": "31.6–32.7 minutes of arc",
+        "Adjectives": "Solar"
+    }],
+    "Orbital Characteristics": [{
+        "Mean Distance from Milky Way Core": "≈ 2.7×10<sup>17</sup> kms (27,200 light-years)",
+        "Galactic Period": "(2.25–2.50)×10<sup>8</sup> years",
+        "Velocity": "≈ 220 km/s (orbit around the center of the Milky Way) |<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;≈ 20 km/s (relative to average velocity of other stars in stellar neighborhood) |<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;≈ 370 km/s (relative to the cosmic microwave background)"
+    }],
+    "Physical Characteristics": [{
+        "Equatorial Radius": "695,700 kms | 696,392 kms | 109 x Earth",
+        "Equatorial Circumference": "4.379×10<sup>6</sup> kms | 109 x Earth",
+        "Flattening": "9x10<sup>-6</sup>",
+        "Surface Area": "6.09x10<sup>12</sup> | 12,000 x Earth",
+        "Volume": "1.41x10<sup>18</sup> kms<sup>3</sup> | 1,300,000 x Earth",
+        "Mass": "1.988,5×10<sup>30</sup> kgs | 333,000 x Earth",
+        "Average Density": "1.408 g/cm<sup>3</sup> | 0.255 x Earth",
+        "Center Density (Modeled)": "162.2 g/cm<sup>3</sup> | 12.4 x Earth",
+        "Equatorial Surface Gravity": "274 m/s<sup>2</sup> | 28 x Earth",
+        "Moment of Inertia Factor": "0.07 (estimate)",
+        "Escape Velocity (from the Surface)": "617.7 km/s",
+        "Temperature": "Center (Modeled): 1.57x10<sup>7</sup> K | Photosphere (Effective): 5,772 K | Corona: ≈ 5×10<sup>6</sup> K",
+        "Luminosity (L<sub>sol</sub>)": "3.828×10<sup>26</sup> W | ≈ 3.75×10<sup>28</sup> lm | ≈ 98 lm/W efficacy",
+        "Color(B-V)": "0.63",
+        "Mean Radiance (I<sub>sol</sub>)": "2.009×10<sup>7</sup> W·m<sup>−2</sup>·sr<sup>−1</sup>",
+        "Age": "≈ 4.6 billion years"
+    }],
+    "Rotation Characteristics": [{
+        "Obliquity": "7.25° (to the ecliptic) | 67.23° (to the galactic plane)",
+        "Right Ascension of North Pole": "286.13° | 19 hours, 4 mins and 30 secs",
+        "Declination of North Pole": "+63.87° | 63° 52' North",
+        "Sidereal Rotation Period": "25.05 days (at Equator) |<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25.38 days [25 days, 9 hours, 7 mins and 12 secs] (at 16° Latitude) |<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34.4 days (at poles)",
+        "Rotation Velocity": "7.189×10<sup>3</sup> km/h (at Equator)"
+    }],
+    "Photospheric Composition (By Mass)": [{
+        "Hydrogen": "73.46%",
+        "Helium": "24.85%",
+        "Oxygen": "0.77%",
+        "Carbon": "0.29%",
+        "Iron": "0.16%",
+        "Neon": "0.12%",
+        "Nitrogen": "0.09%",
+        "Silicon": "0.07%",
+        "Magnesium": "0.05%",
+        "Sulfur": "0.04%"
+    }]
+}

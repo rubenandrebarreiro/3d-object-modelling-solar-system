@@ -1,0 +1,36 @@
+{
+    "Name": "Makemake",
+    "Designations": [{
+        "Alternative Designations": "2005 FY<sub>9</sub>",
+        "Minor Planet Category": "Dwarf Planet, Cubewano, Scattered-near",
+        "Adjectives": "Makemakean"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "52.840 au | 7.904,800×10<sup>9</sup> km",
+        "Perihelion": "38.590 au | 5.773×10<sup>9</sup> km",
+        "Semi-major Axis": "45.715 au | 6.838,900×10<sup>9</sup> km",
+        "Eccentricity": "0.155,860",
+        "Orbital Period": "112,897 days | 309.090 years",
+        "Average Orbital Speed": "4.419 km/s",
+        "Mean Anomaly": "15°",
+        "Inclination": "29.003,850°",
+        "Longitude of Ascending Node": "79.365,900°",
+        "Argument of Perihelion": "297.240°",
+        "Known Satellites": "1"
+    }],
+    "Physical Characteristics": [{
+        "Dimensions": "(1,434<sup>+48 | −18</sup>) × (1420<sup>+18 | −24</sup> km) | (1,502 ± 45) × (1,430 ± 9) km",
+        "Mean Radius": "715<sup>+19 | -11</sup> km | 739 ± 17 km",
+        "Flattening": "0.050",
+        "Surface Area": "(6.900 ± 0.300)×10<sup>6</sup> km<sup>2</sup>",
+        "Volume": "(1.700 ± 0.100)×10<sup>9</sup> km<sup>3</sup>",
+        "Mass": "< 4.4×10<sup>21</sup> kg | < (0.000,736,726 Earths)",
+        "Mean Density": "1.4-3.2 g/cm<sup>3</sup> < 3.05 g/cm<sup>3</sup>",
+        "Sidereal Rotation Period": "7.771 ± 0.003 hours",
+        "Geometric Albedo": "0.810<sup>+0.030 | −0.050</sup>",
+        "Temperature": "32–36 K (Single-terrain Model) | 40–44 K (Two-terrain Model)",
+        "Spectral Type": "B−V = 0.830, V−R = 0.500",
+        "Apparent Magnitude": "17.0 (opposition)",
+        "Absolute Magnitude (H)": "-0.3",
+    }]
+}

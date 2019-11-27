@@ -1,0 +1,38 @@
+{
+    "Name": "Eris",
+    "Designations": [{
+        "Alternative Designations": "2005 UB<sub>313</sub>",
+        "Minor Planet Category": "Dwarf Planet, Trans-Neptunian Object, Plutoid, Scattered-near, Binary",
+        "Adjectives": "Eridian"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "97.651 au | 14.602×10<sup>9</sup> km",
+        "Perihelion": "37.911 au | 5.723×10<sup>9</sup> km",
+        "Semi-major Axis": "67.781 au | 10.166×10<sup>9</sup> km",
+        "Eccentricity": "0.440,680",
+        "Orbital Period": "203,830 days | 558.040 years",
+        "Average Orbital Speed": "3.433,800 km/s",
+        "Mean Anomaly": "204.16°",
+        "Inclination": "44.044,500°",
+        "Longitude of Ascending Node": "35.953,100°",
+        "Argument of Perihelion": "150.977°",
+        "Known Satellites": "1"
+    }],
+    "Physical Characteristics": [{
+        "Dimensions": "	2,326 ± 12 km",
+        "Mean Radius": "1,163 ± 6 km",
+        "Surface Area": "(1.700 ± 0.020)×10<sup>7</sup> km<sup>2</sup>",
+        "Volume": "(6.590 ± 0.100)×10<sup>9</sup> km<sup>3</sup>",
+        "Mass": "(1.660 ± 0.020)×10<sup>22</sup> kg | 0.0028 Earths | 0.23 Moons",
+        "Mean Density": "2.520 ± 0.070 g/cm<sup>3</sup>",
+        "Equatorial Surface Gravity": "0.820 ± 0.02 m/s<sup>2</sup> | 0.083 ± 0.002 g",
+        "Equatorial Escape Velocity": "1.38 ± 0.010 km/s",
+        "Sidereal Rotation Period": "25.900 ± 0.500 hours",
+        "Geometric Albedo": "0.960<sup>+0.090 | −0.040</sup>",
+        "Surface Temp. (Approx.)": "30 K (min) | 42.5 K (mean) | 55 K (max)",
+        "Spectral Type": "B−V = 0.780, V−R = 0.450",
+        "Apparent Magnitude": "18.700",
+        "Absolute Magnitude (H)": "-1.170 <sup>+0.060 | - 0.110</sup>",
+        "Angular Diameter": "40 milli-arcsec"
+    }]
+}

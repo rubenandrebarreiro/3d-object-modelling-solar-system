@@ -1,0 +1,53 @@
+{
+    "Name": "Ceres",
+    "Designations": [{
+        "Astrology Symbol": "⚳",
+        "Alternative Designations": "A899 OF; 1943 XB",
+        "Minor Planet Category": "Dwarf Planet, Asteroid Belt",
+        "Adjectives": "Cererian, Cererean"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "2.977,300 au | 445,410,000 km",
+        "Perihelion": "2.557,700 au | 382,620,000 km",
+        "Semi-major Axis": "2.767,750 au | 414,010,000 km",
+        "Eccentricity": "0.075,823",
+        "Orbital Period": "1.681.630 days | 4.600 years",
+        "Synodic Period": "466.6 days | 1.278 years",
+        "Average Orbital Speed": "17.905 km/s",
+        "Mean Anomaly": "95.989,100°",
+        "Inclination": "10.593° to Ecliptic | 9.20° to Invariable Plane",
+        "Longitude of Ascending Node": "80.329,300°",
+        "Argument of Perihelion": "72.522,000°"
+    }],
+    "Proper Orbital Elements": [{
+        "Proper Semi-major Axis": "2.767,096,200 au",
+        "Proper Eccentricity": "0.116,197,700",
+        "Proper Inclination": "9.647,412,200°",
+        "Proper Mean Motion": "78.193,318 deg/year",
+        "Proper Orbital Period": "1,681.601 days | 4.603,970 years",
+        "Precession of Perihelion": "54.070,272 arcsec/year",
+        "Precession of the Ascending Node": "-59.170,034 arcsec/year"
+    }],
+    "Physical Characteristics": [{
+        "Dimensions": "(965.200×961.200×891.200) ± 2.0 km",
+        "Mean Radius": "473 km",
+        "Surface Area": "2,770,000 km<sup>2</sup>",
+        "Volume": "421,000,000 km<sup>3</sup>",
+        "Mass": "(9.393 ± 0.005)×10<sup>20</sup> kg | 0.000,150 Earths | 0.012,800 Moons",
+        "Mean Density": "2.161 ± 0.009 g/cm<sup>3</sup>",
+        "Equatorial Surface Gravity": "0.280 m/s<sup>2</sup> | 0.029 g",
+        "Moment of Inertia Factor": "0.37 (Estimate)",
+        "Equatorial Escape Velocity": "0.510 km/s",
+        "Sidereal Rotation Period": "9.074,170 ± 0.000,002 hours | 0.378,100 days",
+        "Equatorial Rotation Velocity": "92.610 m/s",
+        "Axial Tilt": "4°",
+        "North Pole Right Ascension": "291.427,440°",
+        "North Pole Declination": "66.764°",
+        "Geometric Albedo": "0.090 ± 0.003,300 (V-Band)",
+        "Surface Temp. (Kelvin)": "~ 168 K (mean) | 235 K (max)",
+        "Spectral Type": "C",
+        "Apparent Magnitude": "6.640 to 9.340",
+        "Absolute Magnitude (H)": "3.340",
+        "Angular Diameter": "2.2″ to 2.4″"
+    }]
+}

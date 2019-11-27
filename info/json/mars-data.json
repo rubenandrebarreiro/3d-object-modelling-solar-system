@@ -1,0 +1,53 @@
+{
+    "Name": "Mars",
+    "Designations": [{
+        "Astrology Symbol": "♂︎",
+        "Adjectives": "Martian, Red Planet"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "1.666 au | 249,200,000 km | 154,800,000 mi",
+        "Perihelion": "1.382 au | 206,700,000 km | 128,400,000 mi",
+        "Semi-major Axis": "1.523,679 au | 227,939,200 km | 141,634,900 mi",
+        "Eccentricity": "0.093,400",
+        "Orbital Period": "686.971 days | 1.880,82 years | 668.599,100 Mars Solar Days",
+        "Synodic Period": "779.96 days | 2.135,400 years",
+        "Average Orbital Speed": "24.007 km/s | 86,430 km/h | 53,700 mph",
+        "Inclination": "1.850° to Ecliptic | 5.65° to Sun's Equator |<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.67° to Invariable Plane",
+        "Longitude of Ascending Node": "49.558°",
+        "Argument of Perihelion": "286.502°",
+        "Satellites": "2"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "3,389.5±0.2 km (2,106.1±0.1 mi)",
+        "Equatorial Radius": "3,396.2±0.1 km (2,110.3±0.1 mi | 0.533 Earths)",
+        "Polar Radius": "3,376.2±0.1 km (2,097.9±0.1 mi | 0.531 Earths)",
+        "Flattening": "0.005,89±0.000,15",
+        "Surface Area": "144,798,500 km<sup>2</sup> (55,907,00 sq mi | 0.284 Earths",
+        "Volume": "1.631,8×10<sup>11</sup> km<sup>3</sup> | 0.151 Earths",
+        "Mass": "6.417,1×10<sup>23</sup> kg | 0.107 Earths",
+        "Mean Density": "3.933,5 g/cm<sup>3</sup> (0.142,1 lb/cu in)",
+        "Surface Gravity": "3,720,76 m/s<sup>2</sup> | 12.207,2 ft/s<sup>2</sup> | 0.379,4 g",
+        "Escape Velocity": "5.027 km/s (18,100 km/h | 11,250 mph)",
+        "Sidereal Rotation Period": "1.025,957 days (24 hours, 37 mins and 22 secs)",
+        "Equatorial Rotation Velocity": "868.22 km/h (241.17 m/s | 539.49 mph)",
+        "Axial Tilt": "25.19° (to its orbital plane)",
+        "North Pole Right Ascension": "21 hours, 10 mins and 44 secs | 317.681,43°",
+        "North Pole Declination": "52.886,50°",
+        "Albedo": "0.25 (Bond) | 0.170 (geom.)",
+        "Surface Temp. (Kelvin)": "130 K (min) | 210 K (mean) | 308 K (max)",
+        "Surface Temp. (Celsius)": "-143 °C (min) | -63 °C (mean) | 35 °C (max)",
+        "Surface Temp. (Fahrenheit)": "-226 °F (min) | -82 °F (mean) | 95 °F (max)",
+        "Apparent Magnitude": "-2.94 to +1.86",
+        "Angular Diameter": "3.5″–25.1″"
+    }],
+    "Atmosphere": [{
+        "Surface Pressure": "0.636 (0.4-0.87) kPa | 0.006,28 atm"
+    }],
+    "Composition by Volume": [{
+        "Carbon Dioxide": "95.97%",
+        "Argon": "1.93%",
+        "Nitrogen": "1.89%",
+        "Oxygen": "0.146%",
+        "Carbon Monoxide": "0.0557%"
+    }] 
+}

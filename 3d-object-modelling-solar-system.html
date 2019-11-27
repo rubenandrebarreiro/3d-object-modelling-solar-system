@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/rubenandrebarreiro/rubenandrebarreiro.github.io/master/assets/images/javascript-logo-1.png"/>
+		<title>3D Object Modelling's Solar System with Sun, Planets, Earth's Moon, Orbits and Trackball Controls</title>
+		<meta charset="utf-8">
+        <meta name="author" content="Rúben André Barreiro" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+
+			body {
+				color: #000;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+				font-weight: bold;
+
+				background-color: #000000;
+				margin: 0px;
+			}
+
+			#intro {
+				color:#ffffff;
+				position: absolute;
+				top: 0px; width: 100%;
+				padding: 5px;
+				box-sizing: border-box;
+			}
+
+            #info {
+				color:#ffffff;
+				position: fixed;
+				top: 0px; left: 0px;
+				padding: 5px;
+				box-sizing: border-box;
+                text-align: left
+			}
+
+            #objectName {
+                text-decoration: underline;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 40px;
+            }
+
+            #objectDataInfo1, #objectDataInfo2, #objectDataInfo3, #objectDataInfo4, #objectDataInfo5, #objectDataInfo6, #objectDataInfo7, #objectDataInfo8 {
+                display: none;
+            }
+
+            #objectDataTitle1, #objectDataTitle2, #objectDataTitle3, #objectDataTitle4, #objectDataTitle5, #objectDataTitle6, #objectDataTitle7, #objectDataTitle8 {
+                font-weight: bold;
+                font-size: 20px;
+                display: none;
+            }
+
+            #objectDataContent1, #objectDataContent2, #objectDataContent3, #objectDataContent4, #objectDataContent5, #objectDataContent6, #objectDataContent7, #objectDataContent8 {
+                color: #ffff00;
+                font-size: 10px;
+                display: none;
+            }
+
+            #optionsAndSettings {
+				color:#ffffff;
+				position: fixed;
+				top: 0px; right: 0px;
+				padding: 5px;
+				box-sizing: border-box;
+                text-align: right
+			}
+
+            #showAndDisplaySettings, #specificOptions {
+                color: #ffff00;
+            }
+
+			a {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="intro">
+            <h1>3D Object Modelling's Solar System</h1>
+            <h3>with Sun, Planets, Earth's Moon, Orbits and Trackball Controls</h3>
+            <br/>
+            <span style="color: #ffff00"> Made with <a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> by <a href="https://rubenandrebarreiro.github.io/" target="_blank" rel="noopener"> Rúben André Barreiro</a></span>
+            <br/>
+            <br/>
+            <h2><b>INSTRUCTIONS:</b></h2>
+            <span style="color: #ffff00">MOVE mouse &amp; press LEFT/A: rotate, MIDDLE/S: zoom, RIGHT/D: pan</span>
+            <br>
+            <h3>NOTES:</h3>
+            <span style="color: #ffff00"><b>Just for visualization's purposes:</b></span>
+            <br/>
+            <span style="color: #ffff00">1) The <u><i>Sun</i></u>' radius are using a scale of 10<sup>-2</sup> kms</span>
+            <br/>
+            <span style="color: #ffff00">2) The <u><i>Planets</i></u>' radius are using a scale of 10<sup>-1</sup> kms</span>
+            <br/>
+            <span style="color: #ffff00">3) The radius of <u><i>Planets</i></u>' orbits are using a scale of 10<sup>-4</sup> kms</span>
+		</div>
+
+        <div id="info">
+            <span id="objectName"></span>
+
+            <div id="objectDataInfo1">
+                <br/>
+                <br/>
+                <br/>
+                <span id="objectDataTitle1"></span>
+                <br/>
+                <span id="objectDataContent1"></span>
+            </div>
+
+            <div id="objectDataInfo2">
+                <br/>
+                <br/>
+                <span id="objectDataTitle2"></span>
+                <br/>
+                <span id="objectDataContent2"></span>
+            </div>
+
+            <div id="objectDataInfo3">
+                <br/>
+                <br/>
+                <span id="objectDataTitle3"></span>
+                <br/>
+                <span id="objectDataContent3"></span>
+            </div>
+
+            <div id="objectDataInfo3">
+                <br/>
+                <br/>
+                <span id="objectDataTitle3"></span>
+                <br/>
+                <span id="objectDataContent3"></span>
+            </div>
+
+            <div id="objectDataInfo4">
+                <br/>
+                <br/>
+                <span id="objectDataTitle4"></span>
+                <br/>
+                <span id="objectDataContent4"></span>
+            </div>
+
+            <div id="objectDataInfo5">
+                <br/>
+                <br/>
+                <span id="objectDataTitle5"></span>
+                <br/>
+                <span id="objectDataContent5"></span>
+            </div>
+
+            <div id="objectDataInfo6">
+                <br/>
+                <br/>
+                <span id="objectDataTitle6"></span>
+                <br/>
+                <span id="objectDataContent6"></span>
+            </div>
+
+            <div id="objectDataInfo7">
+                <br/>
+                <br/>
+                <span id="objectDataTitle7"></span>
+                <br/>
+                <span id="objectDataContent7"></span>
+            </div>
+
+            <div id="objectDataInfo8">
+                <br/>
+                <br/>
+                <span id="objectDataTitle8"></span>
+                <br/>
+                <span id="objectDataContent8"></span>
+            </div>
+
+            <div id="objectDataInfo9">
+                <br/>
+                <br/>
+                <span id="objectDataTitle9"></span>
+                <br/>
+                <span id="objectDataContent9"></span>
+            </div>
+        </div>
+
+        <div id="optionsAndSettings">
+            <h2>Options/Settings:</h2>
+
+            <h3>Show and display:</h3>
+            <div id="showAndDisplaySettings">
+                <input type="checkbox" name="showXZGrid" value="showXZGrid" checked>XZ Grid
+                <br>
+                <input type="checkbox" name="showAxisArrowHelpers" value="showAxisArrowHelpers">Axis Arrow Helpers
+                <br>
+                <input type="checkbox" name="showStarsMilkyWayTexture" value="showStarsMilkyWayTexture" checked>Stars'/Milky Way's Textures
+                <br>
+                <input type="checkbox" name="showPlanetsTextures" value="showPlanetsTextures" checked>Sun's/Planets' Textures
+                <br>
+                <input type="checkbox" name="showPlanetsOrbits" value="showPlanetsOrbits" checked> Planets' Orbits
+                <br>
+                <input type="checkbox" name="showSunAndPlanetsInformations" value="showSunAndPlanetsInformations" checked> Sun's/Planets' Informations
+                <br>
+                <input type="checkbox" name="showPlanetsMoons" value="showPlanetsMoons" checked> Earth's Moon<br>
+                <input type="checkbox" name="showPlanetsMoons" value="showPlanetsMoons" checked> Jupiter's Rings<br>
+            </div>
+
+            <br>
+
+            <h3>Specific options:</h3>
+            <div id="specificOptions">
+                <span style="color: #ffffff">Show Venus's Atmosphere</span>
+                <br/>
+                <input type="radio" name="venusAtmosphere" value="yes" checked> Yes
+                &nbsp;&nbsp;
+                <input type="radio" name="venusAtmosphere" value="no"> No
+                <br/>
+                <span style="color: #ffffff">Select Earth's Daytime</span>
+                <br/>
+                <input type="radio" name="earthDaytime" value="day" checked> Day
+                &nbsp;&nbsp;
+                <input type="radio" name="earthDaytime" value="night"> Night
+                &nbsp;&nbsp;
+                <input type="radio" name="earthDaytime" value="clouds"> Clouds
+                <br/>
+                <span style="color: #ffffff">Show Fictional Planets</span>
+                <br/>
+                <input type="radio" name="showFictionalPlanets" value="yes"> Yes
+                &nbsp;&nbsp;
+                <input type="radio" name="showFictionalPlanets" value="no" checked> No
+                <br/>
+            </div>
+
+        </div>
+
+		<script src="../common/build/three.js"></script>
+
+		<script src="../common/js/controls/TrackballControls.js"></script>
+
+		<script src="../common/js/WebGL.js"></script>
+        <script src="../common/js/Detector.js"></script>
+        <script src="../common/js/renderers/Projector.js"></script>
+		<script src="../common/js/libs/stats.min.js"></script>
+
+		<script>
+
+			if(WEBGL.isWebGLAvailable() === false) {
+                document.body.appendChild(WEBGL.getWebGLErrorMessage());
+			}
+
+			var camera, controls, solarSystemScene, renderer, stats;
+
+            var projector, mouse = { x: window.innerHeight, y: window.innerWidth };
+
+            var SUN_INTERSECTED, MERCURY_INTERSECTED, VENUS_INTERSECTED, EARTH_INTERSECTED, MARS_INTERSECTED, CERES_INTERSECTED, JUPITER_INTERSECTED;
+
+            var loader = new THREE.TextureLoader();
+            loader.setCrossOrigin("");
+
+            const yAxis = new THREE.Vector3(0, 1, 0).normalize();
+
+            // Sun's Element
+            var sunMesh, sunPropertyKeys, sunPivot;
+
+            // Mercury's Elements
+            var mercuryOrbitMesh, mercuryPlanetMesh, mercuryPropertyKeys, mercuryPlanetPivot, mercuryPivot;
+
+            // Venus' Elements
+            var venusOrbitMesh, venusPlanetMesh, venusPropertyKeys, venusPlanetPivot, venusPivot;
+
+            // Earth's Elements
+            var earthOrbitMesh, earthPlanetMesh, earthPropertyKeys, earthPlanetPivot, earthPivot;
+
+            // Mars' Elements
+            var marsOrbitMesh, marsPlanetMesh, marsPropertyKeys, marsPlanetPivot, marsPivot;
+
+            // Ceres' Elements
+            var ceresFictionalOrbitMesh, ceresFictionalPlanetMesh, ceresFictionalPropertyKeys, ceresFictionalPlanetPivot, ceresFictionalPivot;
+
+            // Jupiter's Elements
+            var jupiterOrbitMesh, jupiterPlanetMesh, jupiterPropertyKeys, jupiterPlanetPivot, jupiterPivot;
+
+
+			init();
+			animate();
+
+            // Load JSONs files:
+
+            // A) SUN's JSON file
+            function loadSunJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/sun-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // B) MERCURY's JSON file
+            function loadMercuryJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/mercury-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // C) VENUS' JSON file
+            function loadVenusJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/venus-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // D) EARTH's JSON file
+            function loadEarthJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/earth-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // F) MARS' JSON file
+            function loadMarsJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/mars-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // G) CERES' JSON file
+            function loadCeresFictionalJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/ceres-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // H) JUPITER's JSON file
+            function loadJupiterJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/jupiter-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // I) SATURN's JSON file
+            function loadSaturnJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/saturn-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // J) URANUS' JSON file
+            function loadUranusJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/uranus-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // K) NEPTUNE's JSON file
+            function loadNeptuneJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/neptune-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // L) PLUTO's JSON file
+            function loadPlutoJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/pluto-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // M) HAUMEA's JSON file
+            function loadHaumeaJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/haumea-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // N) MAKEMAKE's JSON file
+            function loadMakemakeJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/makemake-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+            // O) ERIS' JSON file
+            function loadErisJSON(callback) {
+
+                var obj = new XMLHttpRequest();
+                obj.overrideMimeType("application/json");
+                obj.open('GET', 'info/json/eris-data.json', true);
+
+                obj.onreadystatechange = function () {
+                    if (obj.readyState == 4 && obj.status == "200") {
+                        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                        callback(obj.responseText);
+                    }
+                };
+
+                obj.send(null);
+            }
+
+
+			function init() {
+				camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 600000);
+				camera.position.y = 20;
+                camera.position.z = 200000;
+
+				controls = new THREE.TrackballControls(camera);
+
+				controls.rotateSpeed = 1.0;
+				controls.zoomSpeed = 1.2;
+				controls.panSpeed = 0.8;
+
+				controls.noZoom = false;
+				controls.noPan = false;
+
+				controls.staticMoving = true;
+				controls.dynamicDampingFactor = 0.3;
+
+				controls.keys = [ 65, 83, 68 ];
+
+				controls.addEventListener('change', render);
+
+				// Creating the Galaxy's Scene
+				solarSystemScene = new THREE.Scene();
+
+
+                var gridXZ = new THREE.GridHelper(400000, 20, new THREE.Color(0xff0000), new THREE.Color(0xffffff));
+                solarSystemScene.add(gridXZ);
+
+                backgroundTexture = loader.load("assets/textures/background/stars-milky-way-texture.jpg",
+                    function (texture) {
+                       var image = texture.image;
+                       var backgroundWidth= image.width;
+                       var backgroundHeight = image.height;
+                       onWindowResize();
+                    }
+                );
+
+                solarSystemScene.background = backgroundTexture;
+                backgroundTexture.wrapS = THREE.MirroredRepeatWrapping;
+                backgroundTexture.wrapT = THREE.MirroredRepeatWrapping;
+
+                // Adding the elements (Sun, Planets and their respective Orbits and Moons)
+
+                // INFO:
+                // 1) It will be used a size scale of 0.01 kms to determine the size of the Sun
+                // 2) It will be used a size scale of 0.1 kms to determine the size of the Planets
+                // 3) It will be used a size scale of 0.000,1 kms to determine the radius of the Planets' orbits
+                // The final size of each planet and their respective orbits will be rounded to the units or to the first decimal, since it's possible
+
+                // A) SUN's setup
+                sunTexture = loader.load('assets/textures/sun/sun-texture.jpg', function (texture) {});
+
+                // The radius of Sun is 695,508 kms (Resolution: [695,508 * 0.0025] = 1739)
+                var sunGeometry = new THREE.SphereGeometry(1739, 40, 40);
+                var sunMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        map: sunTexture,
+                        overdraw: 0.5
+                    }
+                );
+
+                sunMesh = new THREE.Mesh(sunGeometry, sunMaterial);
+
+                loadSunJSON(function(response) {
+                    // Parse Sun's JSON string into object
+                    var sunDataJSON = JSON.parse(response);
+
+                    sunPropertyKeys = Object.keys(sunDataJSON);
+
+                    for(i = 0; i < sunPropertyKeys.length; i++)
+                        sunMesh[sunPropertyKeys[i]] = sunDataJSON[sunPropertyKeys[i]];
+                });
+
+
+                sunPivot = new THREE.Group();
+
+                sunPivot.add(sunMesh);
+
+                solarSystemScene.add(sunPivot);
+
+
+                // B) MERCURY's setup
+
+                // The average distance/orbit's radius from the Sun ranging from 46,000,000 kms to 70,000,000 kms
+                // It will be used an average orbit's radius of an interval between 57,500,000 and 58,000,000 (Resolution: [57,500,000 * 0.000,1] = 5,750 and [58,000,000 * 0.000,1] = 5,800)
+                var mercuryOrbitGeometry = new THREE.RingGeometry(5750, 5800, 60);
+                var mercuryOrbitMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        color: 0xffff00,
+                        side: THREE.DoubleSide
+                    }
+                );
+
+                mercuryOrbitMesh = new THREE.Mesh(mercuryOrbitGeometry, mercuryOrbitMaterial);
+                mercuryOrbitMesh.rotation.x = Math.PI / 2;
+
+
+                mercuryPlanetTexture = loader.load('assets/textures/planets/mercury-planet-texture.jpg', function (mercuryPlanetTexture) {});
+
+                // The radius of Mercury is 2,440 kms (Resolution: [2,440 * 0.05] = 122)
+                var mercuryPlanetGeometry = new THREE.SphereGeometry(122, 40, 40);
+                var mercuryPlanetMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        map: mercuryPlanetTexture,
+                        overdraw: 0.5
+                    }
+                );
+
+                mercuryPlanetMesh = new THREE.Mesh(mercuryPlanetGeometry, mercuryPlanetMaterial);
+                mercuryPlanetMesh.position.z = 5775;
+
+                loadMercuryJSON(function(response) {
+                    // Parse Mercury's JSON string into object
+                    var mercuryDataJSON = JSON.parse(response);
+
+                    mercuryPropertyKeys = Object.keys(mercuryDataJSON);
+
+                    for(i = 0; i < mercuryPropertyKeys.length; i++)
+                        mercuryPlanetMesh[mercuryPropertyKeys[i]] = mercuryDataJSON[mercuryPropertyKeys[i]];
+                });
+
+                mercuryPlanetPivot = new THREE.Group();
+                mercuryPivot = new THREE.Group();
+
+                mercuryPlanetPivot.add(mercuryPlanetMesh);
+
+                mercuryPivot.add(mercuryOrbitMesh);
+                mercuryPivot.add(mercuryPlanetPivot);
+
+                mercuryPivot.position.x = -1600;
+
+                solarSystemScene.add(mercuryPivot);
+
+
+                // C) VENUS' setup
+
+                // The average distance/orbit's radius from the Sun ranging from 46,000,000 kms to 70,000,000 kms
+                // It will be used an average orbit's radius of an interval between 108,000,000 and 108,500,000 (Resolution: [108,000,000 * 0.000,1] = 10,800 and [108,500,000 * 0.000,1] = 10,850)
+                var venusOrbitGeometry = new THREE.RingGeometry(10800, 10850, 60);
+                var venusOrbitMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        color: 0xffff00,
+                        side: THREE.DoubleSide
+                    }
+                );
+
+                venusOrbitMesh = new THREE.Mesh(venusOrbitGeometry, venusOrbitMaterial);
+                venusOrbitMesh.rotation.x = Math.PI / 2;
+
+
+                venusPlanetTexture = loader.load('assets/textures/planets/venus-planet-texture.jpg', function (venusPlanetTexture) {});
+
+                // The radius of Venus is 6,052 kms (Resolution: [6,052 * 0.05] = 303)
+                var venusPlanetGeometry = new THREE.SphereGeometry(303, 40, 40);
+                var venusPlanetMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        map: venusPlanetTexture,
+                        overdraw: 0.5
+                    }
+                );
+
+                venusPlanetMesh = new THREE.Mesh(venusPlanetGeometry, venusPlanetMaterial);
+                venusPlanetMesh.position.z = 10825;
+
+                loadVenusJSON(function(response) {
+                    // Parse Venus' JSON string into object
+                    var venusDataJSON = JSON.parse(response);
+
+                    venusPropertyKeys = Object.keys(venusDataJSON);
+
+                    for(i = 0; i < venusPropertyKeys.length; i++)
+                        venusPlanetMesh[venusPropertyKeys[i]] = venusDataJSON[venusPropertyKeys[i]];
+                });
+
+                venusPlanetPivot = new THREE.Group();
+                venusPivot = new THREE.Group();
+
+                venusPlanetPivot.add(venusPlanetMesh);
+
+                venusPivot.add(venusOrbitMesh);
+                venusPivot.add(venusPlanetPivot);
+
+                venusPivot.position.x = -1600;
+
+                solarSystemScene.add(venusPivot);
+
+
+                // D) EARTH's setup
+
+                // The average distance/orbit's radius from the Sun ranging from 46,000,000 kms to 70,000,000 kms
+                // It will be used an average orbit's radius of an interval between 108,000,000 and 108,500,000 (Resolution: [149,300,000 * 0.000,1] = 14,930 and [149,800,000 * 0.000,1] = 14,980)
+                var earthOrbitGeometry = new THREE.RingGeometry(14930, 14980, 60);
+                var earthOrbitMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        color: 0xffff00,
+                        side: THREE.DoubleSide
+                    }
+                );
+
+                earthOrbitMesh = new THREE.Mesh(earthOrbitGeometry, earthOrbitMaterial);
+                earthOrbitMesh.rotation.x = Math.PI / 2;
+
+
+                earthPlanetTexture = loader.load('assets/textures/planets/earth-planet-day-texture.jpg', function (earthPlanetTexture) {});
+
+                // The radius of Earth is 6,371 kms (Resolution: [6,371 * 0.05] = 303)
+                var earthPlanetGeometry = new THREE.SphereGeometry(319, 40, 40);
+                var earthPlanetMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        map: earthPlanetTexture,
+                        overdraw: 0.5
+                    }
+                );
+
+                earthPlanetMesh = new THREE.Mesh(earthPlanetGeometry, earthPlanetMaterial);
+                earthPlanetMesh.position.z = 14955;
+
+                loadEarthJSON(function(response) {
+                    // Parse Earth's JSON string into object
+                    var earthDataJSON = JSON.parse(response);
+
+                    earthPropertyKeys = Object.keys(earthDataJSON);
+
+                    for(i = 0; i < earthPropertyKeys.length; i++)
+                        earthPlanetMesh[earthPropertyKeys[i]] = earthDataJSON[earthPropertyKeys[i]];
+                });
+
+                earthPlanetPivot = new THREE.Group();
+                earthPivot = new THREE.Group();
+
+                earthPlanetPivot.add(earthPlanetMesh);
+
+                earthPivot.add(earthOrbitMesh);
+                earthPivot.add(earthPlanetPivot);
+
+                earthPivot.position.x = -1600;
+
+                solarSystemScene.add(earthPivot);
+
+
+                // F) MARS' setup
+
+                // The average distance/orbit's radius from the Sun ranging from 46,000,000 kms to 70,000,000 kms
+                // It will be used an average orbit's radius of an interval between 227,000,000 and 108,500,000 (Resolution: [227,650,000 * 0.000,1] = 22,765 and [228,150,000 * 0.000,1] = 22,815)
+                var marsOrbitGeometry = new THREE.RingGeometry(22765, 22815, 60);
+                var marsOrbitMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        color: 0xffff00,
+                        side: THREE.DoubleSide
+                    }
+                );
+
+                marsOrbitMesh = new THREE.Mesh(marsOrbitGeometry, marsOrbitMaterial);
+                marsOrbitMesh.rotation.x = Math.PI / 2;
+
+
+                marsPlanetTexture = loader.load('assets/textures/planets/mars-planet-texture.jpg', function (marsPlanetTexture) {});
+
+                // The radius of Mars is 3,390 kms (Resolution: [3,390 * 0.05] = 170)
+                var marsPlanetGeometry = new THREE.SphereGeometry(170, 40, 40);
+                var marsPlanetMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        map: marsPlanetTexture,
+                        overdraw: 0.5
+                    }
+                );
+
+                marsPlanetMesh = new THREE.Mesh(marsPlanetGeometry, marsPlanetMaterial);
+                marsPlanetMesh.position.z = 22790;
+
+                loadMarsJSON(function(response) {
+                    // Parse Mars' JSON string into object
+                    var marsDataJSON = JSON.parse(response);
+
+                    marsPropertyKeys = Object.keys(marsDataJSON);
+
+                    for(i = 0; i < marsPropertyKeys.length; i++)
+                        marsPlanetMesh[marsPropertyKeys[i]] = marsDataJSON[marsPropertyKeys[i]];
+                });
+
+                marsPlanetPivot = new THREE.Group();
+                marsPivot = new THREE.Group();
+
+                marsPlanetPivot.add(marsPlanetMesh);
+
+                marsPivot.add(marsOrbitMesh);
+                marsPivot.add(marsPlanetPivot);
+
+                marsPivot.position.x = -1600;
+
+                solarSystemScene.add(marsPivot);
+
+
+                // G) CERES' setup
+
+                // The average distance/orbit's radius from the Sun ranging from 46,000,000 kms to 70,000,000 kms
+                // It will be used an average orbit's radius of an interval between 227,000,000 and 108,500,000 (Resolution: [227,650,000 * 0.000,1] = 22,765 and [228,150,000 * 0.000,1] = 22,815)
+                var ceresFictionalOrbitGeometry = new THREE.RingGeometry(30025, 30075, 60);
+                var ceresFictionalOrbitMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        color: 0xffff00,
+                        side: THREE.DoubleSide
+                    }
+                );
+
+                ceresFictionalOrbitMesh = new THREE.Mesh(ceresFictionalOrbitGeometry, ceresFictionalOrbitMaterial);
+                ceresFictionalOrbitMesh.rotation.x = Math.PI / 2;
+
+
+                ceresFictionalPlanetTexture = loader.load('assets/textures/fictional-planets/ceres-fictional-planet-texture.jpg', function (ceresFictionalPlanetTexture) {});
+
+                // The radius of Ceres is 490 kms (Resolution: [490 * 0.05] = 170)
+                var ceresFictionalPlanetGeometry = new THREE.SphereGeometry(25, 40, 40);
+                var ceresFictionalPlanetMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        map: ceresFictionalPlanetTexture,
+                        overdraw: 0.5
+                    }
+                );
+
+                ceresFictionalPlanetMesh = new THREE.Mesh(ceresFictionalPlanetGeometry, ceresFictionalPlanetMaterial);
+                ceresFictionalPlanetMesh.position.z = 30050;
+
+                loadCeresFictionalJSON(function(response) {
+                    // Parse Ceres' JSON string into object
+                    var ceresFictionalDataJSON = JSON.parse(response);
+
+                    ceresFictionalPropertyKeys = Object.keys(ceresFictionalDataJSON);
+
+                    for(i = 0; i < ceresFictionalPropertyKeys.length; i++)
+                        ceresFictionalPlanetMesh[ceresFictionalPropertyKeys[i]] = ceresFictionalDataJSON[ceresFictionalPropertyKeys[i]];
+                });
+
+                ceresFictionalPlanetPivot = new THREE.Group();
+                ceresFictionalPivot = new THREE.Group();
+
+                ceresFictionalPlanetPivot.add(ceresFictionalPlanetMesh);
+
+                ceresFictionalPivot.add(ceresFictionalOrbitMesh);
+                ceresFictionalPivot.add(ceresFictionalPlanetPivot);
+
+                ceresFictionalPivot.position.x = -1600;
+
+                solarSystemScene.add(ceresFictionalPivot);
+
+
+                // H) JUPITER's setup
+
+                // The average distance/orbit's radius from the Sun ranging from 46,000,000 kms to 70,000,000 kms
+                // It will be used an average orbit's radius of an interval between 227,000,000 and 108,500,000 (Resolution: [778,250,000 * 0.000,05] = 38,912 and [778,750,000 * 0.000,05] = 38,938)
+                var jupiterOrbitGeometry = new THREE.RingGeometry(38912, 38938, 60);
+                var jupiterOrbitMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        color: 0xffff00,
+                        side: THREE.DoubleSide
+                    }
+                );
+
+                jupiterOrbitMesh = new THREE.Mesh(jupiterOrbitGeometry, jupiterOrbitMaterial);
+                jupiterOrbitMesh.rotation.x = Math.PI / 2;
+
+
+                jupiterPlanetTexture = loader.load('assets/textures/planets/jupiter-planet-texture.jpg', function (jupiterPlanetTexture) {});
+
+                // The radius of Jupiter is 69,911 kms (Resolution: [69,911 * 0.0125] = 170)
+                var jupiterPlanetGeometry = new THREE.SphereGeometry(874, 40, 40);
+                var jupiterPlanetMaterial = new THREE.MeshBasicMaterial(
+                    {
+                        map: jupiterPlanetTexture,
+                        overdraw: 0.5
+                    }
+                );
+
+                jupiterPlanetMesh = new THREE.Mesh(jupiterPlanetGeometry, jupiterPlanetMaterial);
+                jupiterPlanetMesh.position.z = 38926;
+
+                loadJupiterJSON(function(response) {
+                    // Parse Jupiter's JSON string into object
+                    var jupiterDataJSON = JSON.parse(response);
+
+                    jupiterPropertyKeys = Object.keys(jupiterDataJSON);
+
+                    for(i = 0; i < jupiterPropertyKeys.length; i++)
+                        jupiterPlanetMesh[jupiterPropertyKeys[i]] = jupiterDataJSON[jupiterPropertyKeys[i]];
+                });
+
+                jupiterPlanetPivot = new THREE.Group();
+                jupiterPivot = new THREE.Group();
+
+                jupiterPlanetPivot.add(jupiterPlanetMesh);
+
+                jupiterPivot.add(jupiterOrbitMesh);
+                jupiterPivot.add(jupiterPlanetPivot);
+
+                jupiterPivot.position.x = -1600;
+
+                solarSystemScene.add(jupiterPivot);
+
+
+                // Creating all the solar system's scene's lights
+				var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+				directionalLight1.position.set(1, 1, 1);
+				solarSystemScene.add(directionalLight1);
+
+				var directionalLight2 = new THREE.DirectionalLight(0x002288);
+				directionalLight2.position.set(- 1, - 1, - 1);
+				solarSystemScene.add(directionalLight2);
+
+				var ambientLight = new THREE.AmbientLight(0x222222);
+				solarSystemScene.add(ambientLight);
+
+
+                // Creating the renderer
+				renderer = new THREE.WebGLRenderer(
+                    {
+                        antialias: true
+                    }
+                );
+
+                renderer.setPixelRatio(window.devicePixelRatio);
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				document.body.appendChild(renderer.domElement);
+
+				stats = new Stats();
+				document.body.appendChild(stats.dom);
+
+				window.addEventListener('resize', onWindowResize, false);
+
+                // Initialize object to perform world/screen calculations
+                projector = new THREE.Projector();
+
+                // When the mouse moves, call the given function
+                document.addEventListener('mousemove', onDocumentMouseMove, false);
+
+                render();
+			}
+
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, window.innerHeight);
+
+				controls.handleResize();
+
+				render();
+			}
+
+            function onDocumentMouseMove(event) {
+                // The following line would stop any other event handler from firing
+                // (such as the mouse's TrackballControls)
+                // event.preventDefault();
+
+                // Update the mouse variable
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+            }
+
+			function animate() {
+			    requestAnimationFrame(animate);
+
+                findIntersectionsSun();
+
+                findIntersectionsMercury();
+
+                findIntersectionsVenus();
+
+                findIntersectionsEarth();
+
+                findIntersectionsMars();
+
+                findIntersectionsCeres();
+
+                findIntersectionsJupiter();
+
+				controls.update();
+
+				stats.update();
+			}
+
+            function findIntersectionsSun() {
+                // Create a Ray with origin at the mouse position
+                // and direction into the scene (camera direction)
+                var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+                projector.unprojectVector(vector, camera);
+
+                var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+
+                // Create an array containing all objects in the scene with which the ray intersects
+                var intersects = ray.intersectObjects(sunPivot.children);
+
+                // SUN_INTERSECTED = the object in the scene currently closest to the camera
+                // and intersected by the Ray projected from the mouse position
+
+                // If there is one (or more) intersections
+                if(intersects.length > 0) {
+
+                    // If the closest object intersected is not the currently stored intersection object
+                    if(intersects[0].object != SUN_INTERSECTED) {
+                        // Restore previous intersection object (if it exists) to its original map's texture
+                        if(SUN_INTERSECTED) {
+                            SUN_INTERSECTED.material.needsUpdate = true;
+
+                            SUN_INTERSECTED.material.color.setHex(0xffffff);
+                            SUN_INTERSECTED.material.map = SUN_INTERSECTED.mapTexture;
+
+                            document.getElementById("objectName").textContent = "";
+
+                            for(i = 1; i < sunPropertyKeys.length; i++) {
+                                var divDataInfoElemID = "objectDataInfo" + i;
+                                document.getElementById(divDataInfoElemID).style.display = "none";
+
+                                var spanDataTitleElemID = "objectDataTitle" + i;
+                                document.getElementById(spanDataTitleElemID).innerHTML = "";
+                                document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                                var spanDataContentElemID = "objectDataContent" + i;
+                                document.getElementById(spanDataContentElemID).innerHTML = "";
+                                document.getElementById(spanDataContentElemID).style.display = "none";
+                            }
+                        }
+
+                        // Store reference to closest object as current intersection object
+                        SUN_INTERSECTED = intersects[0].object;
+
+                        // Store color and map's texture of closest object (for later restoration)
+                        SUN_INTERSECTED.mapTexture = SUN_INTERSECTED.material.map;
+
+                        // Set a new color for closest object
+                        SUN_INTERSECTED.material.map = null;
+                        SUN_INTERSECTED.material.needsUpdate = true;
+
+                        SUN_INTERSECTED.material.color.setHex(0xffff00);
+
+                        document.getElementById("objectName").textContent = intersects[0].object[sunPropertyKeys[0]];
+
+                        for(i = 1; i < sunPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "inline";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = sunPropertyKeys[i];
+                            document.getElementById(spanDataTitleElemID).style.display = "inline";
+
+                            var someObjectDataInfo = (intersects[0].object[sunPropertyKeys[i]])[0];
+
+                            var someObjectDataInfoKeys = Object.keys(someObjectDataInfo);
+
+                            var currentObjectDataInfo = "";
+
+                            for(j = 0; j < someObjectDataInfoKeys.length; j++)
+                                currentObjectDataInfo += "- <b><u>" + someObjectDataInfoKeys[j] + "</u></b>: " + someObjectDataInfo[someObjectDataInfoKeys[j]] + "<br/>";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = currentObjectDataInfo;
+                            document.getElementById(spanDataContentElemID).style.display = "inline";
+                        }
+                    }
+                }
+                else { // There are no intersections
+
+                    // Restore previous intersection object (if it exists) to its original map's texture
+                    if(SUN_INTERSECTED) {
+                        SUN_INTERSECTED.material.needsUpdate = true;
+
+                        SUN_INTERSECTED.material.color.setHex(0xffffff);
+                        SUN_INTERSECTED.material.map = SUN_INTERSECTED.mapTexture;
+
+                        document.getElementById("objectName").textContent = "";
+
+                        for(i = 1; i < sunPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "none";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = "";
+                            document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = "";
+                            document.getElementById(spanDataContentElemID).style.display = "none";
+                        }
+                    }
+
+                    // Remove previous intersection object reference
+                    // by setting current intersection object to "nothing"
+                    SUN_INTERSECTED = null;
+                }
+            }
+
+            function findIntersectionsMercury() {
+                // Create a Ray with origin at the mouse position
+                // and direction into the scene (camera direction)
+                var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+                projector.unprojectVector(vector, camera);
+
+                var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+
+                // Create an array containing all objects in the scene with which the ray intersects
+                var intersects = ray.intersectObjects(mercuryPlanetPivot.children);
+
+                // MERCURY_INTERSECTED = the object in the scene currently closest to the camera
+                // and intersected by the Ray projected from the mouse position
+
+                // If there is one (or more) intersections
+                if(intersects.length > 0) {
+
+                    // If the closest object intersected is not the currently stored intersection object
+                    if(intersects[0].object != MERCURY_INTERSECTED) {
+                        // Restore previous intersection object (if it exists) to its original map's texture
+                        if(MERCURY_INTERSECTED) {
+                            MERCURY_INTERSECTED.material.needsUpdate = true;
+
+                            MERCURY_INTERSECTED.material.color.setHex(0xffffff);
+                            MERCURY_INTERSECTED.material.map = MERCURY_INTERSECTED.mapTexture;
+
+                            document.getElementById("objectName").textContent = "";
+
+                            for(i = 1; i < mercuryPropertyKeys.length; i++) {
+                                var divDataInfoElemID = "objectDataInfo" + i;
+                                document.getElementById(divDataInfoElemID).style.display = "none";
+
+                                var spanDataTitleElemID = "objectDataTitle" + i;
+                                document.getElementById(spanDataTitleElemID).innerHTML = "";
+                                document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                                var spanDataContentElemID = "objectDataContent" + i;
+                                document.getElementById(spanDataContentElemID).innerHTML = "";
+                                document.getElementById(spanDataContentElemID).style.display = "none";
+                            }
+                        }
+
+                        // Store reference to closest object as current intersection object
+                        MERCURY_INTERSECTED = intersects[0].object;
+
+                        // Store color and map's texture of closest object (for later restoration)
+                        MERCURY_INTERSECTED.mapTexture = MERCURY_INTERSECTED.material.map;
+
+                        // Set a new color for closest object
+                        MERCURY_INTERSECTED.material.map = null;
+                        MERCURY_INTERSECTED.material.needsUpdate = true;
+
+                        MERCURY_INTERSECTED.material.color.setHex(0xffff00);
+
+                        document.getElementById("objectName").textContent = intersects[0].object[mercuryPropertyKeys[0]];
+
+                        for(i = 1; i < mercuryPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "inline";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = mercuryPropertyKeys[i];
+                            document.getElementById(spanDataTitleElemID).style.display = "inline";
+
+                            var someObjectDataInfo = (intersects[0].object[mercuryPropertyKeys[i]])[0];
+
+                            var someObjectDataInfoKeys = Object.keys(someObjectDataInfo);
+
+                            var currentObjectDataInfo = "";
+
+                            for(j = 0; j < someObjectDataInfoKeys.length; j++)
+                                currentObjectDataInfo += "- <b><u>" + someObjectDataInfoKeys[j] + "</u></b>: " + someObjectDataInfo[someObjectDataInfoKeys[j]] + "<br/>";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = currentObjectDataInfo;
+                            document.getElementById(spanDataContentElemID).style.display = "inline";
+                        }
+                    }
+                }
+                else { // There are no intersections
+
+                    // Restore previous intersection object (if it exists) to its original map's texture
+                    if(MERCURY_INTERSECTED) {
+                        MERCURY_INTERSECTED.material.needsUpdate = true;
+
+                        MERCURY_INTERSECTED.material.color.setHex(0xffffff);
+                        MERCURY_INTERSECTED.material.map = MERCURY_INTERSECTED.mapTexture;
+
+                        document.getElementById("objectName").textContent = "";
+
+                        for(i = 1; i < mercuryPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "none";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = "";
+                            document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = "";
+                            document.getElementById(spanDataContentElemID).style.display = "none";
+                        }
+                    }
+
+                    // Remove previous intersection object reference
+                    // by setting current intersection object to "nothing"
+                    MERCURY_INTERSECTED = null;
+                }
+            }
+
+            function findIntersectionsVenus() {
+                // Create a Ray with origin at the mouse position
+                // and direction into the scene (camera direction)
+                var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+                projector.unprojectVector(vector, camera);
+
+                var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+
+                // Create an array containing all objects in the scene with which the ray intersects
+                var intersects = ray.intersectObjects(venusPlanetPivot.children);
+
+                // VENUS_INTERSECTED = the object in the scene currently closest to the camera
+                // and intersected by the Ray projected from the mouse position
+
+                // If there is one (or more) intersections
+                if(intersects.length > 0) {
+
+                    // If the closest object intersected is not the currently stored intersection object
+                    if(intersects[0].object != VENUS_INTERSECTED) {
+                        // Restore previous intersection object (if it exists) to its original map's texture
+                        if(VENUS_INTERSECTED) {
+                            VENUS_INTERSECTED.material.needsUpdate = true;
+
+                            VENUS_INTERSECTED.material.color.setHex(0xffffff);
+                            VENUS_INTERSECTED.material.map = VENUS_INTERSECTED.mapTexture;
+
+                            document.getElementById("objectName").textContent = "";
+
+                            for(i = 1; i < venusPropertyKeys.length; i++) {
+                                var divDataInfoElemID = "objectDataInfo" + i;
+                                document.getElementById(divDataInfoElemID).style.display = "none";
+
+                                var spanDataTitleElemID = "objectDataTitle" + i;
+                                document.getElementById(spanDataTitleElemID).innerHTML = "";
+                                document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                                var spanDataContentElemID = "objectDataContent" + i;
+                                document.getElementById(spanDataContentElemID).innerHTML = "";
+                                document.getElementById(spanDataContentElemID).style.display = "none";
+                            }
+                        }
+
+                        // Store reference to closest object as current intersection object
+                        VENUS_INTERSECTED = intersects[0].object;
+
+                        // Store color and map's texture of closest object (for later restoration)
+                        VENUS_INTERSECTED.mapTexture = VENUS_INTERSECTED.material.map;
+
+                        // Set a new color for closest object
+                        VENUS_INTERSECTED.material.map = null;
+                        VENUS_INTERSECTED.material.needsUpdate = true;
+
+                        VENUS_INTERSECTED.material.color.setHex(0xffff00);
+
+                        document.getElementById("objectName").textContent = intersects[0].object[venusPropertyKeys[0]];
+
+                        for(i = 1; i < venusPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "inline";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = venusPropertyKeys[i];
+                            document.getElementById(spanDataTitleElemID).style.display = "inline";
+
+                            var someObjectDataInfo = (intersects[0].object[venusPropertyKeys[i]])[0];
+
+                            var someObjectDataInfoKeys = Object.keys(someObjectDataInfo);
+
+                            var currentObjectDataInfo = "";
+
+                            for(j = 0; j < someObjectDataInfoKeys.length; j++)
+                                currentObjectDataInfo += "- <b><u>" + someObjectDataInfoKeys[j] + "</u></b>: " + someObjectDataInfo[someObjectDataInfoKeys[j]] + "<br/>";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = currentObjectDataInfo;
+                            document.getElementById(spanDataContentElemID).style.display = "inline";
+                        }
+                    }
+                }
+                else { // There are no intersections
+
+                    // Restore previous intersection object (if it exists) to its original map's texture
+                    if(VENUS_INTERSECTED) {
+                        VENUS_INTERSECTED.material.needsUpdate = true;
+
+                        VENUS_INTERSECTED.material.color.setHex(0xffffff);
+                        VENUS_INTERSECTED.material.map = VENUS_INTERSECTED.mapTexture;
+
+                        document.getElementById("objectName").textContent = "";
+
+                        for(i = 1; i < venusPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "none";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = "";
+                            document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = "";
+                            document.getElementById(spanDataContentElemID).style.display = "none";
+                        }
+                    }
+
+                    // Remove previous intersection object reference
+                    // by setting current intersection object to "nothing"
+                    VENUS_INTERSECTED = null;
+                }
+            }
+
+            function findIntersectionsEarth() {
+                // Create a Ray with origin at the mouse position
+                // and direction into the scene (camera direction)
+                var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+                projector.unprojectVector(vector, camera);
+
+                var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+
+                // Create an array containing all objects in the scene with which the ray intersects
+                var intersects = ray.intersectObjects(earthPlanetPivot.children);
+
+                // EARTH_INTERSECTED = the object in the scene currently closest to the camera
+                // and intersected by the Ray projected from the mouse position
+
+                // If there is one (or more) intersections
+                if(intersects.length > 0) {
+
+                    // If the closest object intersected is not the currently stored intersection object
+                    if(intersects[0].object != EARTH_INTERSECTED) {
+                        // Restore previous intersection object (if it exists) to its original map's texture
+                        if(EARTH_INTERSECTED) {
+                            EARTH_INTERSECTED.material.needsUpdate = true;
+
+                            EARTH_INTERSECTED.material.color.setHex(0xffffff);
+                            EARTH_INTERSECTED.material.map = EARTH_INTERSECTED.mapTexture;
+
+                            document.getElementById("objectName").textContent = "";
+
+                            for(i = 1; i < earthPropertyKeys.length; i++) {
+                                var divDataInfoElemID = "objectDataInfo" + i;
+                                document.getElementById(divDataInfoElemID).style.display = "none";
+
+                                var spanDataTitleElemID = "objectDataTitle" + i;
+                                document.getElementById(spanDataTitleElemID).innerHTML = "";
+                                document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                                var spanDataContentElemID = "objectDataContent" + i;
+                                document.getElementById(spanDataContentElemID).innerHTML = "";
+                                document.getElementById(spanDataContentElemID).style.display = "none";
+                            }
+                        }
+
+                        // Store reference to closest object as current intersection object
+                        EARTH_INTERSECTED = intersects[0].object;
+
+                        // Store color and map's texture of closest object (for later restoration)
+                        EARTH_INTERSECTED.mapTexture = EARTH_INTERSECTED.material.map;
+
+                        // Set a new color for closest object
+                        EARTH_INTERSECTED.material.map = null;
+                        EARTH_INTERSECTED.material.needsUpdate = true;
+
+                        EARTH_INTERSECTED.material.color.setHex(0xffff00);
+
+                        document.getElementById("objectName").textContent = intersects[0].object[earthPropertyKeys[0]];
+
+                        for(i = 1; i < earthPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "inline";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = earthPropertyKeys[i];
+                            document.getElementById(spanDataTitleElemID).style.display = "inline";
+
+                            var someObjectDataInfo = (intersects[0].object[earthPropertyKeys[i]])[0];
+
+                            var someObjectDataInfoKeys = Object.keys(someObjectDataInfo);
+
+                            var currentObjectDataInfo = "";
+
+                            for(j = 0; j < someObjectDataInfoKeys.length; j++)
+                                currentObjectDataInfo += "- <b><u>" + someObjectDataInfoKeys[j] + "</u></b>: " + someObjectDataInfo[someObjectDataInfoKeys[j]] + "<br/>";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = currentObjectDataInfo;
+                            document.getElementById(spanDataContentElemID).style.display = "inline";
+                        }
+                    }
+                }
+                else { // There are no intersections
+
+                    // Restore previous intersection object (if it exists) to its original map's texture
+                    if(EARTH_INTERSECTED) {
+                        EARTH_INTERSECTED.material.needsUpdate = true;
+
+                        EARTH_INTERSECTED.material.color.setHex(0xffffff);
+                        EARTH_INTERSECTED.material.map = EARTH_INTERSECTED.mapTexture;
+
+                        document.getElementById("objectName").textContent = "";
+
+                        for(i = 1; i < earthPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "none";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = "";
+                            document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = "";
+                            document.getElementById(spanDataContentElemID).style.display = "none";
+                        }
+                    }
+
+                    // Remove previous intersection object reference
+                    // by setting current intersection object to "nothing"
+                    EARTH_INTERSECTED = null;
+                }
+            }
+
+            function findIntersectionsMars() {
+                // Create a Ray with origin at the mouse position
+                // and direction into the scene (camera direction)
+                var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+                projector.unprojectVector(vector, camera);
+
+                var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+
+                // Create an array containing all objects in the scene with which the ray intersects
+                var intersects = ray.intersectObjects(marsPlanetPivot.children);
+
+                // MARS_INTERSECTED = the object in the scene currently closest to the camera
+                // and intersected by the Ray projected from the mouse position
+
+                // If there is one (or more) intersections
+                if(intersects.length > 0) {
+
+                    // If the closest object intersected is not the currently stored intersection object
+                    if(intersects[0].object != MARS_INTERSECTED) {
+                        // Restore previous intersection object (if it exists) to its original map's texture
+                        if(MARS_INTERSECTED) {
+                            MARS_INTERSECTED.material.needsUpdate = true;
+
+                            MARS_INTERSECTED.material.color.setHex(0xffffff);
+                            MARS_INTERSECTED.material.map = MARS_INTERSECTED.mapTexture;
+
+                            document.getElementById("objectName").textContent = "";
+
+                            for(i = 1; i < marsPropertyKeys.length; i++) {
+                                var divDataInfoElemID = "objectDataInfo" + i;
+                                document.getElementById(divDataInfoElemID).style.display = "none";
+
+                                var spanDataTitleElemID = "objectDataTitle" + i;
+                                document.getElementById(spanDataTitleElemID).innerHTML = "";
+                                document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                                var spanDataContentElemID = "objectDataContent" + i;
+                                document.getElementById(spanDataContentElemID).innerHTML = "";
+                                document.getElementById(spanDataContentElemID).style.display = "none";
+                            }
+                        }
+
+                        // Store reference to closest object as current intersection object
+                        MARS_INTERSECTED = intersects[0].object;
+
+                        // Store color and map's texture of closest object (for later restoration)
+                        MARS_INTERSECTED.mapTexture = MARS_INTERSECTED.material.map;
+
+                        // Set a new color for closest object
+                        MARS_INTERSECTED.material.map = null;
+                        MARS_INTERSECTED.material.needsUpdate = true;
+
+                        MARS_INTERSECTED.material.color.setHex(0xffff00);
+
+                        document.getElementById("objectName").textContent = intersects[0].object[marsPropertyKeys[0]];
+
+                        for(i = 1; i < marsPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "inline";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = marsPropertyKeys[i];
+                            document.getElementById(spanDataTitleElemID).style.display = "inline";
+
+                            var someObjectDataInfo = (intersects[0].object[marsPropertyKeys[i]])[0];
+
+                            var someObjectDataInfoKeys = Object.keys(someObjectDataInfo);
+
+                            var currentObjectDataInfo = "";
+
+                            for(j = 0; j < someObjectDataInfoKeys.length; j++)
+                                currentObjectDataInfo += "- <b><u>" + someObjectDataInfoKeys[j] + "</u></b>: " + someObjectDataInfo[someObjectDataInfoKeys[j]] + "<br/>";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = currentObjectDataInfo;
+                            document.getElementById(spanDataContentElemID).style.display = "inline";
+                        }
+                    }
+                }
+                else { // There are no intersections
+
+                    // Restore previous intersection object (if it exists) to its original map's texture
+                    if(MARS_INTERSECTED) {
+                        MARS_INTERSECTED.material.needsUpdate = true;
+
+                        MARS_INTERSECTED.material.color.setHex(0xffffff);
+                        MARS_INTERSECTED.material.map = MARS_INTERSECTED.mapTexture;
+
+                        document.getElementById("objectName").textContent = "";
+
+                        for(i = 1; i < marsPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "none";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = "";
+                            document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = "";
+                            document.getElementById(spanDataContentElemID).style.display = "none";
+                        }
+                    }
+
+                    // Remove previous intersection object reference
+                    // by setting current intersection object to "nothing"
+                    MARS_INTERSECTED = null;
+                }
+            }
+
+            function findIntersectionsCeres() {
+                // Create a Ray with origin at the mouse position
+                // and direction into the scene (camera direction)
+                var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+                projector.unprojectVector(vector, camera);
+
+                var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+
+                // Create an array containing all objects in the scene with which the ray intersects
+                var intersects = ray.intersectObjects(ceresFictionalPlanetPivot.children);
+
+                // CERES_INTERSECTED = the object in the scene currently closest to the camera
+                // and intersected by the Ray projected from the mouse position
+
+                // If there is one (or more) intersections
+                if(intersects.length > 0) {
+
+                    // If the closest object intersected is not the currently stored intersection object
+                    if(intersects[0].object != CERES_INTERSECTED) {
+                        // Restore previous intersection object (if it exists) to its original map's texture
+                        if(CERES_INTERSECTED) {
+                            CERES_INTERSECTED.material.needsUpdate = true;
+
+                            CERES_INTERSECTED.material.color.setHex(0xffffff);
+                            CERES_INTERSECTED.material.map = CERES_INTERSECTED.mapTexture;
+
+                            document.getElementById("objectName").textContent = "";
+
+                            for(i = 1; i < ceresFictionalPropertyKeys.length; i++) {
+                                var divDataInfoElemID = "objectDataInfo" + i;
+                                document.getElementById(divDataInfoElemID).style.display = "none";
+
+                                var spanDataTitleElemID = "objectDataTitle" + i;
+                                document.getElementById(spanDataTitleElemID).innerHTML = "";
+                                document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                                var spanDataContentElemID = "objectDataContent" + i;
+                                document.getElementById(spanDataContentElemID).innerHTML = "";
+                                document.getElementById(spanDataContentElemID).style.display = "none";
+                            }
+                        }
+
+                        // Store reference to closest object as current intersection object
+                        CERES_INTERSECTED = intersects[0].object;
+
+                        // Store color and map's texture of closest object (for later restoration)
+                        CERES_INTERSECTED.mapTexture = CERES_INTERSECTED.material.map;
+
+                        // Set a new color for closest object
+                        CERES_INTERSECTED.material.map = null;
+                        CERES_INTERSECTED.material.needsUpdate = true;
+
+                        CERES_INTERSECTED.material.color.setHex(0xffff00);
+
+                        document.getElementById("objectName").textContent = intersects[0].object[ceresFictionalPropertyKeys[0]];
+
+                        for(i = 1; i < ceresFictionalPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "inline";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = ceresFictionalPropertyKeys[i];
+                            document.getElementById(spanDataTitleElemID).style.display = "inline";
+
+                            var someObjectDataInfo = (intersects[0].object[ceresFictionalPropertyKeys[i]])[0];
+
+                            var someObjectDataInfoKeys = Object.keys(someObjectDataInfo);
+
+                            var currentObjectDataInfo = "";
+
+                            for(j = 0; j < someObjectDataInfoKeys.length; j++)
+                                currentObjectDataInfo += "- <b><u>" + someObjectDataInfoKeys[j] + "</u></b>: " + someObjectDataInfo[someObjectDataInfoKeys[j]] + "<br/>";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = currentObjectDataInfo;
+                            document.getElementById(spanDataContentElemID).style.display = "inline";
+                        }
+                    }
+                }
+                else { // There are no intersections
+
+                    // Restore previous intersection object (if it exists) to its original map's texture
+                    if(CERES_INTERSECTED) {
+                        CERES_INTERSECTED.material.needsUpdate = true;
+
+                        CERES_INTERSECTED.material.color.setHex(0xffffff);
+                        CERES_INTERSECTED.material.map = CERES_INTERSECTED.mapTexture;
+
+                        document.getElementById("objectName").textContent = "";
+
+                        for(i = 1; i < ceresFictionalPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "none";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = "";
+                            document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = "";
+                            document.getElementById(spanDataContentElemID).style.display = "none";
+                        }
+                    }
+
+                    // Remove previous intersection object reference
+                    // by setting current intersection object to "nothing"
+                    CERES_INTERSECTED = null;
+                }
+            }
+
+            function findIntersectionsJupiter() {
+                // Create a Ray with origin at the mouse position
+                // and direction into the scene (camera direction)
+                var vector = new THREE.Vector3(mouse.x, mouse.y, 1);
+                projector.unprojectVector(vector, camera);
+
+                var ray = new THREE.Raycaster(camera.position, vector.sub(camera.position).normalize());
+
+                // Create an array containing all objects in the scene with which the ray intersects
+                var intersects = ray.intersectObjects(jupiterPlanetPivot.children);
+
+                // JUPITER_INTERSECTED = the object in the scene currently closest to the camera
+                // and intersected by the Ray projected from the mouse position
+
+                // If there is one (or more) intersections
+                if(intersects.length > 0) {
+
+                    // If the closest object intersected is not the currently stored intersection object
+                    if(intersects[0].object != JUPITER_INTERSECTED) {
+                        // Restore previous intersection object (if it exists) to its original map's texture
+                        if(JUPITER_INTERSECTED) {
+                            JUPITER_INTERSECTED.material.needsUpdate = true;
+
+                            JUPITER_INTERSECTED.material.color.setHex(0xffffff);
+                            JUPITER_INTERSECTED.material.map = JUPITER_INTERSECTED.mapTexture;
+
+                            document.getElementById("objectName").textContent = "";
+
+                            for(i = 1; i < jupiterPropertyKeys.length; i++) {
+                                var divDataInfoElemID = "objectDataInfo" + i;
+                                document.getElementById(divDataInfoElemID).style.display = "none";
+
+                                var spanDataTitleElemID = "objectDataTitle" + i;
+                                document.getElementById(spanDataTitleElemID).innerHTML = "";
+                                document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                                var spanDataContentElemID = "objectDataContent" + i;
+                                document.getElementById(spanDataContentElemID).innerHTML = "";
+                                document.getElementById(spanDataContentElemID).style.display = "none";
+                            }
+                        }
+
+                        // Store reference to closest object as current intersection object
+                        JUPITER_INTERSECTED = intersects[0].object;
+
+                        // Store color and map's texture of closest object (for later restoration)
+                        JUPITER_INTERSECTED.mapTexture = JUPITER_INTERSECTED.material.map;
+
+                        // Set a new color for closest object
+                        JUPITER_INTERSECTED.material.map = null;
+                        JUPITER_INTERSECTED.material.needsUpdate = true;
+
+                        JUPITER_INTERSECTED.material.color.setHex(0xffff00);
+
+                        document.getElementById("objectName").textContent = intersects[0].object[jupiterPropertyKeys[0]];
+
+                        for(i = 1; i < jupiterPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "inline";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = jupiterPropertyKeys[i];
+                            document.getElementById(spanDataTitleElemID).style.display = "inline";
+
+                            var someObjectDataInfo = (intersects[0].object[jupiterPropertyKeys[i]])[0];
+
+                            var someObjectDataInfoKeys = Object.keys(someObjectDataInfo);
+
+                            var currentObjectDataInfo = "";
+
+                            for(j = 0; j < someObjectDataInfoKeys.length; j++)
+                                currentObjectDataInfo += "- <b><u>" + someObjectDataInfoKeys[j] + "</u></b>: " + someObjectDataInfo[someObjectDataInfoKeys[j]] + "<br/>";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = currentObjectDataInfo;
+                            document.getElementById(spanDataContentElemID).style.display = "inline";
+                        }
+                    }
+                }
+                else { // There are no intersections
+
+                    // Restore previous intersection object (if it exists) to its original map's texture
+                    if(JUPITER_INTERSECTED) {
+                        JUPITER_INTERSECTED.material.needsUpdate = true;
+
+                        JUPITER_INTERSECTED.material.color.setHex(0xffffff);
+                        JUPITER_INTERSECTED.material.map = JUPITER_INTERSECTED.mapTexture;
+
+                        document.getElementById("objectName").textContent = "";
+
+                        for(i = 1; i < jupiterPropertyKeys.length; i++) {
+                            var divDataInfoElemID = "objectDataInfo" + i;
+                            document.getElementById(divDataInfoElemID).style.display = "none";
+
+                            var spanDataTitleElemID = "objectDataTitle" + i;
+                            document.getElementById(spanDataTitleElemID).innerHTML = "";
+                            document.getElementById(spanDataTitleElemID).style.display = "none";
+
+                            var spanDataContentElemID = "objectDataContent" + i;
+                            document.getElementById(spanDataContentElemID).innerHTML = "";
+                            document.getElementById(spanDataContentElemID).style.display = "none";
+                        }
+                    }
+
+                    // Remove previous intersection object reference
+                    // by setting current intersection object to "nothing"
+                    JUPITER_INTERSECTED = null;
+                }
+            }
+
+            // Sun and Planets' rotation movements
+            function rotationMovements() {
+                var speedRotationSun = 0.0001 * 27;
+                var speedRotationMercuryPlanet = 0.00001 * 58;
+                var speedRotationVenusPlanet = 0.00001 * 58;
+                sunMesh.rotation.y += speedRotationSun;
+
+                mercuryPlanetMesh.rotation.y += speedRotationMercuryPlanet;
+                venusPlanetMesh.rotation.y += speedRotationVenusPlanet;
+            }
+
+            // Planets' translaction movements around the sun
+            function translactionMovements() {
+
+                // Creating the quarternion for the planet Mercury
+                var quaternionForMercuryPlanet = new THREE.Quaternion();
+
+                quaternionForMercuryPlanet.setFromAxisAngle(yAxis, 0.00005);
+                mercuryPlanetMesh.position.applyQuaternion(quaternionForMercuryPlanet);
+
+                // Creating the quarternion for the planet Venus
+                var quaternionForVenusPlanet = new THREE.Quaternion();
+
+                quaternionForVenusPlanet.setFromAxisAngle(yAxis, 0.00005);
+                venusPlanetMesh.position.applyQuaternion(quaternionForVenusPlanet);
+            }
+
+			function render() {
+                requestAnimationFrame(render);
+                rotationMovements();
+                translactionMovements();
+				renderer.render(solarSystemScene, camera);
+			}
+		</script>
+	</body>
+</html>

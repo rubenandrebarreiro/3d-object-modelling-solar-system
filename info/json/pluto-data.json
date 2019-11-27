@@ -1,0 +1,46 @@
+{
+    "Name": "Pluto",
+    "Designations": [{
+        "Astrology Symbol": "♇",
+        "Minor Planet Category": "Dwarf Planet, Trans-Neptunian Object, Plutoid, Kuiper Belt Object, Plutino",
+        "Adjectives": "Plutonian"
+    }],
+    "Orbital Characteristics": [{
+        "Aphelion": "49.305 au | 737,593,000,000,000 km",
+        "Perihelion": "29.658 au | 443,682,000,000,000 km",
+        "Semi-major Axis": "39.480 au | 590,638,000,000,000 km",
+        "Eccentricity": "0.248,800",
+        "Orbital Period": "90,560 days | 248 years",
+        "Synodic Period": "366.73 days",
+        "Average Orbital Speed": "4.670 km/s",
+        "Mean Anomaly": "14.530°",
+        "Inclination": "17.160° to Ecliptic | 11.880° to Sun's Equator",
+        "Longitude of Ascending Node": "110.299°",
+        "Argument of Perihelion": "113.834°",
+        "Known Satellites": "5"
+    }],
+    "Physical Characteristics": [{
+        "Mean Radius": "1,188.300 ± 1.6 km | 0.186,800 Earths",
+        "Flattening": "< 1%",
+        "Surface Area": "1.779×10<sup>7</sup> km<sup>2</sup> | 0.035 Earths",
+        "Volume": "(7.057 ± 0.004)×10<sup>9</sup> km<sup>3</sup> | 0.006,510 Earths",
+        "Mass": "(1.303 ± 0.003)×10<sup>22</sup> kg | 0.002,180 Earths | 0.177 Moons",
+        "Mean Density": "1.854 ± 0.006 g/cm<sup>3</sup>",
+        "Surface Gravity": "0.620 m/s<sup>2</sup> | 0.063 g",
+        "Escape Velocity": "1.212 km/s",
+        "Sidereal Rotation Period": "6 days, 9 hours, 17 mins and 36 secs | 6.387,230 days",
+        "Equatorial Rotation Velocity": "47.180 km/h",
+        "Axial Tilt": "122.53° (to orbit)",
+        "North Pole Right Ascension": "132.993°",
+        "North Pole Declination": "-6.163°",
+        "Albedo": "0.490 to 0.660 (gemometric, varies by 35%)",
+        "Surface Temp. (Kelvin)": "33 K (min) | 44 K (mean) | 55 K (mean)",
+        "Apparent Magnitude": "13.65 to 16.3 (mean is 15.1)",
+        "Absolute Magnitude (H)": "-0.7",
+        "Angular Diameter": "0.06″ to 0.11″"
+    }],
+    "Atmosphere": [{
+        "Surface Pressure": "1.0 Pa (2015)",
+        "Composition by Volume": "Nitrogen, Methane, Carbon Monoxide"
+    }]
+}
