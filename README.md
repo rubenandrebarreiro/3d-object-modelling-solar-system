@@ -1,24 +1,24 @@
-# 3D Object Viewer - Solar System
+# 3D Object's Modelling - Solar System
 
-![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-viewer-solar-system/master/imgs/JPGs/banner-1.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-viewer-solar-system/master/imgs/JPGs/banner-1.jpg)
-######  3D Object Viewer (Solar System) - Banner #1
+![https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-solar-system/master/imgs/JPGs/banner-1.jpg](https://raw.githubusercontent.com/rubenandrebarreiro/3d-object-modelling-solar-system/master/imgs/JPGs/banner-1.jpg)
+######  3D Object's Modelling (Solar System) - Banner #1
 
 ***
 
 
 ## Current Status
 [![contributor for this repository](https://img.shields.io/badge/contributor-rubenandrebarreiro-blue.svg)](https://github.com/rubenandrebarreiro/)
-[![current version](https://img.shields.io/badge/version-1.0-magenta.svg)](https://github.com/rubenandrebarreiro/3d-object-viewer-solar-system/)
+[![current version](https://img.shields.io/badge/version-1.0-magenta.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
 
-[![status of this version no. 1](https://img.shields.io/badge/status-not&nbsp;completed-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-viewer-solar-system/)
-[![status of this version no. 2](https://img.shields.io/badge/status-not&nbsp;final-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-viewer-solar-system/)
-[![status of this version no. 3](https://img.shields.io/badge/status-beta-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-viewer-solar-system/)
-[![status of this version no. 4](https://img.shields.io/badge/status-not&nbsp;documented-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-viewer-solar-system/)
+[![status of this version no. 1](https://img.shields.io/badge/status-not&nbsp;completed-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
+[![status of this version no. 2](https://img.shields.io/badge/status-not&nbsp;final-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
+[![status of this version no. 3](https://img.shields.io/badge/status-beta-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
+[![status of this version no. 4](https://img.shields.io/badge/status-not&nbsp;documented-orange.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
 
-[![keyword of this version no. 1](https://img.shields.io/badge/keyword-3d-brown.svg)](https://github.com/rubenandrebarreiro/2d-rotative-shapes-dance/)
-[![keyword of this version no. 2](https://img.shields.io/badge/keyword-graphics-brown.svg)](https://github.com/rubenandrebarreiro/2d-rotative-shapes-dance/)
-[![keyword of this version no. 3](https://img.shields.io/badge/keyword-solar-brown.svg)](https://github.com/rubenandrebarreiro/2d-rotative-shapes-dance/)
-[![keyword of this version no. 4](https://img.shields.io/badge/keyword-system-brown.svg)](https://github.com/rubenandrebarreiro/2d-rotative-shapes-dance/)
+[![keyword of this version no. 1](https://img.shields.io/badge/keyword-3d-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
+[![keyword of this version no. 2](https://img.shields.io/badge/keyword-graphics-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
+[![keyword of this version no. 3](https://img.shields.io/badge/keyword-solar-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
+[![keyword of this version no. 4](https://img.shields.io/badge/keyword-system-brown.svg)](https://github.com/rubenandrebarreiro/3d-object-modelling-solar-system/)
 
 [![technology used no. 1](https://img.shields.io/badge/built&nbsp;with-html-red.svg)](https://www.w3schools.com/html/) [![technology used no. 2](https://img.shields.io/badge/built&nbsp;with-css-red.svg)](https://www.w3schools.com/css/) [![technology used no. 3](https://img.shields.io/badge/built&nbsp;with-javascript-red.svg)](https://www.w3schools.com/js/) [![technology used no. 4](https://img.shields.io/badge/built&nbsp;with-json-red.svg)](https://www.json.org/) [![technology used no. 5](https://img.shields.io/badge/built&nbsp;with-webgl-red.svg)](https://get.webgl.org/)
 [![technology used no. 6](https://img.shields.io/badge/built&nbsp;with-threejs-red.svg)](https://threejs.org/)
